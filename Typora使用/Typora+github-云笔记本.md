@@ -104,13 +104,10 @@ git commit -m "提交注释2113"
 
 ```
 将本地库版本推送到github中
-git push   git@github.com:yusenyi123/-.git master
+git push   git@github.com:yusenyi123/notebook.git  master
 
 
-git push  git@gitee.com:yusenyi/typora_notes.git    master
-git pull git@gitee.com:yusenyi/typora_notes.git    master
-
-git push  https://gitee.com/yusenyi/typora_notes.git master
+git push  git@gitee.com:yusenyi/notebook.git master
 
 
 ```
@@ -120,3 +117,9 @@ git push  https://gitee.com/yusenyi/typora_notes.git master
 ###  4.1 笔记文件名不要包含空格，如果有空格那么上传到github中预览的时候将无法看到图片
 
 ### 4.2 笔记文件名不要太长，太长也会出现上述问题
+
+恶趣味
+
+3213231312
+
+21321
