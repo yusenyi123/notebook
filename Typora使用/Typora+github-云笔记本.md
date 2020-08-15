@@ -117,5 +117,3 @@ git push  git@gitee.com:yusenyi/notebook.git master
 ###  4.1 笔记文件名不要包含空格，如果有空格那么上传到github中预览的时候将无法看到图片
 
 ### 4.2 笔记文件名不要太长，太长也会出现上述问题
-
-12313
