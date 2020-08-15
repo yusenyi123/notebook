@@ -87,7 +87,7 @@ kroot 参数： 虚拟磁盘中根文件所在分区  kroot=根分区挂载好�
 
 
 
-![image-20200811194114443](../assets/grub2 菜单代码解析.assets/image-20200811194114443.png)
+![image-20200811194114443](../assets/grub2菜单代码解析.assets/image-20200811194114443.png)
 
 The ‘search.file’, ‘search.fs_label’, and ‘search.fs_uuid’ commands are aliases for ‘search --file’, ‘search --label’, and ‘search --fs-uuid’ respectively.
 

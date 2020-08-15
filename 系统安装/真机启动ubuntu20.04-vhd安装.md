@@ -1,4 +1,4 @@
-# 真机启动ubuntu20.04 vhd安装
+# 真机启动ubuntu20.04-vhd安装
 
 
 
