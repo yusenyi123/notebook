@@ -81,3 +81,6 @@ git push   git@github.com:yusenyi123/-.git master
 ![1234](../1.png)
 
 ![123](./测试/1.png)
+
+![123](../测  试/1.png)
+
