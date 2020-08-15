@@ -71,6 +71,12 @@ ssh-keygen -t rsa -C "2597400284@qq.com"
 ```
 
 ```
-git push  git@gitee.com:yusenyi/typora_notes.git  master
+git push  git@gitee.com:yusenyi/typora_notes.git   master
+
+git push   git@github.com:yusenyi123/-.git master
 ```
+
+![123](./1.png)
+
+
 
