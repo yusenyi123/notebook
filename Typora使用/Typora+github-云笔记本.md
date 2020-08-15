@@ -1,6 +1,6 @@
 
 
-## 1. Typora介绍32132
+## 1. Typora介绍
 
 Typora 是一款**支持实时预览的 Markdown 文本编辑器**。它有 OS X、Windows、Linux 三个平台的版本，并且由于仍在测试中，是**完全免费**的。下载地址：https://www.typora.io/
 
