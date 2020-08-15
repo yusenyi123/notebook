@@ -76,7 +76,7 @@ git push  git@gitee.com:yusenyi/typora_notes.git   master
 git push   git@github.com:yusenyi123/-.git master
 ```
 
-![123](./1.png)
+![123](./test/1.png)
 
 
 
