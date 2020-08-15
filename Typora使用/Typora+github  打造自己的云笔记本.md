@@ -54,3 +54,23 @@ git add .  提交新文件(new)和被修改(modified)文件，不包括被删除
 git commit -m "提交注释2113"
 ```
 
+```
+ssh-keygen -t rsa -C "your_email@example.com"
+
+ssh-keygen -t rsa -C "2597400284@qq.com"
+代码参数含义：
+-t 指定密钥类型，默认是 rsa ，可以省略。
+-C 设置注释文字，比如邮箱。
+-f 指定密钥文件存储文件名。
+
+接着又会提示你输入两次密码（该密码是你push文件的时候要输入的密码，而不是github管理者的密码）
+当然，你也可以不输入密码，直接按回车。那么push的时候就不需要输入密码，直接提交到github上了
+
+
+
+```
+
+```
+git push  git@gitee.com:yusenyi/typora_notes.git  master
+```
+
