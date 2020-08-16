@@ -1,4 +1,4 @@
-# git GUI 汉化   中文乱码解决
+# git GUI 汉化   git各种中文乱码解决
 
 
 
@@ -29,7 +29,7 @@ export LESSCHARSET=utf-8                          # 因为 git log 默认使用 
 
 ```
 
-以上命令等效于：
+以上命令与下面在对应文件中添加相应数据等效：
 在Git安装目录下的 **/etc/gitconfig** 文件中添加
 
 ```
