@@ -36,11 +36,13 @@ Markdown 是用来编写结构化文档的一种纯文本格式，它使我们�
 
 ### 3.1 git安装和设置环境变量
 
-[Git安装](../git使用/git安装.md)
+[Git安装](../git使用/git安装.md) 
+
+https://git-scm.com/downloads
 
 如果我们单纯用来做笔记本，我们就下载便携版本的git,下载完解压就能用
 
-把git解压目录下的cmd文件夹路径添加到系统变量中 E:\git\cmd
+把git解压目录下的cmd文件夹路径添加到系统变量中 
 
 ### 3.2 生成ssh公钥,使用ssh公钥不需要每次向github提交都输入密码
 
@@ -75,6 +77,15 @@ ssh-keygen -t rsa -f  ~/.ssh/test   -C "test key"
 
 
 执行完这个代码后在我们的用户目录下会生成一个.ssh的隐藏文件夹，文件夹里面有两个文件id_rsa和id_rsa.pub，前者是私钥，后者是公钥，复制id_rsa.pub的内容添加到github的ssh公钥处
+目录.ssh下的文件说明
+
+id_rsa ：存放私钥的文件
+id_rsa.pub ：存放公钥的文件
+known_hsots ：可以保存多个公钥文件，每个访问过计算机的公钥(public key)都记录在~/.ssh/known_hosts文件中
+authorized_keys ：A机器生成的公钥-->放B的机器.ssh下authorized_keys文件里，A就能免密访问B，但是B不能访问A。如果需要两台电脑互相访问均免密码。则需要重复上面的步骤（机器的配置刚好相反）。
+
+ssh在建立连接的时候不指定-i参数会默认寻找 ~/.ssh/id_rsa
+若是省略 -i 参数，则 ssh-copy-id 会将默认的密钥 ~/.ssh/id_rsa 对应的公钥交付给远程主机。
 
 ```
 
