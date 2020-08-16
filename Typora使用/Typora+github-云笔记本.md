@@ -86,7 +86,7 @@ git init
 
 
 
-## 4. 使用quicker 编写脚本进行一键初始化和远程同步
+## 4. 使用quicker 编写脚本进行一键初始化和远程同步，脚本基于以下命令
 
 ```
 将笔记本文件夹下所有文件进行跟踪，提交所有变化
@@ -115,7 +115,11 @@ git push  git@gitee.com:yusenyi/notebook.git master
 
 ```
 
+quicker脚本链接:
 
+https://getquicker.net/sharedaction?code=eab4e074-1096-4ee0-30eb-08d8405a0b37
+
+![image-20200816114349589](../assets/Typora+github-云笔记本/image-20200816114349589.png)
 
 ## 5. 注意事项
 
