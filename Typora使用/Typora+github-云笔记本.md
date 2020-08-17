@@ -52,6 +52,7 @@ https://git-scm.com/downloads
 git config --global user.email "2597400284@qq.com"
 git config --global user.name "sensen"
 
+
 生成ssh登录公钥和私钥
 ssh-keygen -t rsa -C "your_email@example.com"
 
@@ -87,6 +88,17 @@ authorized_keys ：A机器生成的公钥-->放B的机器.ssh下authorized_keys�
 ssh在建立连接的时候不指定-i参数会默认寻找 ~/.ssh/id_rsa
 若是省略 -i 参数，则 ssh-copy-id 会将默认的密钥 ~/.ssh/id_rsa 对应的公钥交付给远程主机。
 
+```
+
+quicker脚本
+
+```
+git config --global user.email "youxiang"
+git config --global user.name "user"
+ssh-keygen -t rsa -C "sshkey"
+$sshtext=(cat ~/.ssh/id_rsa.pub)
+echo $sshtext
+pause
 ```
 
 ![image-20200815203025258](../assets/Typora+github-云笔记本/image-20200815203025258.png  ".ssh文件夹下的文件" )
