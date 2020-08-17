@@ -1,4 +1,4 @@
-
+# Typora+github/码云-打造自己的云笔记本
 
 ## 1. Typora介绍
 
@@ -14,7 +14,7 @@ Markdown 是用来编写结构化文档的一种纯文本格式，它使我们�
 
 ## 2.Typora安装和设置
 
-
+下载地址：https://www.typora.io/#windows
 
 ### 2.1 图像设置，在这里设置插入图片的保存规则，选相对路径，在你的笔记目录下建一个文件夹专门存放图片，然后把放图片那个目录设置隐藏，这样在下面菜单中就不会显示了，都是我们的笔记看着很清爽
 
@@ -90,9 +90,14 @@ ssh在建立连接的时候不指定-i参数会默认寻找 ~/.ssh/id_rsa
 
 ```
 
-quicker脚本
+## quicker脚本：一键添加环境变量和获得ssh的
+
+https://getquicker.net/Sharedaction?code=d49471e9-8176-4f5a-d1c3-08d8423ccd55&fromMyShare=true
 
 ```
+
+setx PATH "%PATH%;E:\winpe" 
+
 git config --global user.email "youxiang"
 git config --global user.name "user"
 ssh-keygen -t rsa -C "sshkey"
@@ -163,7 +168,7 @@ git push  git@gitee.com:yusenyi/notebook.git master
 
 ### 4.1 quicker脚本链接:
 
-https://getquicker.net/sharedaction?code=eab4e074-1096-4ee0-30eb-08d8405a0b37
+https://getquicker.net/Sharedaction?code=bf3da905-e641-4bc8-668d-08d841787f87&fromMyShare=true
 
 ![image-20200816114349589](../assets/Typora+github-云笔记本/image-20200816114349589.png)
 
