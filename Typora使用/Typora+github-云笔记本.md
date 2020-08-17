@@ -18,6 +18,8 @@ Markdown 是用来编写结构化文档的一种纯文本格式，它使我们�
 
 ### 2.1 图像设置，在这里设置插入图片的保存规则，选相对路径，在你的笔记目录下建一个文件夹专门存放图片，然后把放图片那个目录设置隐藏，这样在下面菜单中就不会显示了，都是我们的笔记看着很清爽
 
+==图像设置这样做的目的是：为了让我们这托管的网站查看我们的笔记的时候也能看到笔记中的图片==
+
 ![image-20200815115209812](../assets/Typora+github-云笔记本/image-20200815115209812.png)
 
 ![image-20200815115251679](../assets/Typora+github-云笔记本/image-20200815115251679.png  "我的笔记本文件夹概况")
@@ -40,9 +42,9 @@ Markdown 是用来编写结构化文档的一种纯文本格式，它使我们�
 
 https://git-scm.com/downloads
 
-如果我们单纯用来做笔记本，我们就下载便携版本的git,下载完解压就能用
+==如果我们单纯用来做笔记本，我们就下载便携版本的git,下载完解压就能用==
 
-把git解压目录下的cmd文件夹路径添加到系统变量中 
+==把git解压目录下的cmd文件夹路径添加到系统变量中== 
 
 ### 3.2 生成ssh公钥,使用ssh公钥不需要每次向github提交都输入密码
 
@@ -90,13 +92,12 @@ ssh在建立连接的时候不指定-i参数会默认寻找 ~/.ssh/id_rsa
 
 ```
 
-## quicker脚本：一键添加环境变量和获得ssh的
+## quicker脚本：一键获得ssh的公钥
 
 https://getquicker.net/Sharedaction?code=d49471e9-8176-4f5a-d1c3-08d8423ccd55&fromMyShare=true
 
 ```
-
-setx PATH "%PATH%;E:\winpe" 
+脚本为下列代码
 
 git config --global user.email "youxiang"
 git config --global user.name "user"
@@ -104,6 +105,17 @@ ssh-keygen -t rsa -C "sshkey"
 $sshtext=(cat ~/.ssh/id_rsa.pub)
 echo $sshtext
 pause
+```
+
+```
+一些其他杂项知识记录
+
+echo %path%
+set PATH="%PATH%E:\git\cmd" 
+
+setx PATH "%PATH%;E:\git\cmd" /m
+/m 表示添加到系统环境变量
+$Env:path=$Env:Path+";E:\git\cmd"  
 ```
 
 ![image-20200815203025258](../assets/Typora+github-云笔记本/image-20200815203025258.png  ".ssh文件夹下的文件" )
@@ -166,17 +178,17 @@ git push  git@gitee.com:yusenyi/notebook.git master
 
 ```
 
-### 4.1 quicker脚本链接:
+### 4.1 quicker一键脚本链接:
 
 https://getquicker.net/Sharedaction?code=bf3da905-e641-4bc8-668d-08d841787f87&fromMyShare=true
 
 ![image-20200816114349589](../assets/Typora+github-云笔记本/image-20200816114349589.png)
 
-### 4.2 脚本使用
+### 4.2 一键同步脚本使用
 
 第一次启动脚本会让你输入远程仓库的ssh链接和选择需要上传的笔记文件夹，第一次运行完之后脚本会记录你输入的远程仓库的ssh链接和你选择的文件夹，下次再运行就不需要设置。
 
-如果要进行重新设置,按住ctrl再运行该活动，就会进入初始化设置状态重新设置ssh链接和选择要上传的文件夹
+==如果要进行重新设置,按住ctrl再运行该活动，就会进入初始化设置状态重新设置ssh链接和选择要上传的文件夹==
 
 
 
