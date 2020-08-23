@@ -440,6 +440,6 @@ route  [add|del] [-net|-host] target [netmask Nm] [gw Gw] [[dev] If]
 
 3、UCI是OpenWrt统一配置文件的标准，真心不太喜欢这种语法，没iptables来的清晰。
 
-4、OpenWrt基于firewall的配置，由于涉及到多个网口，有Wan和Lan这些，最终会转换成很多自定义的链，看来来很吃力，我的建议是直接在firewall层全部开启，然后自己使用iptables做限制。不建议停掉之后再自己写配置，不然你无法知道哪些网口是走向什么地方的。
+4、OpenWrt基于firewall的配置，由于涉及到多个网口，有Wan和Lan这些，最终会转换成很多自定义的链，看来很吃力，我的建议是直接在firewall层全部开启，然后自己使用iptables做限制。不建议停掉之后再自己写配置，不然你无法知道哪些网口是走向什么地方的。
 
 5、firewall不能单独关闭，不然会无法上网。
