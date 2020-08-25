@@ -85,7 +85,12 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 
 
 
+## 刷机的时候刷坏了，使用编程器直接对闪存芯片进行刷写
+
+win10 在联网的情况下当编程器插上的时候会自动安装驱动
+
+![image-20200825114539561](../assets/openwrt中继的一些思考/image-20200825114539561.png)
+
+![image-20200825114615331](../assets/openwrt中继的一些思考/image-20200825114615331.png)
+
 ![image-20200825103855295](../assets/openwrt中继的一些思考/image-20200825103855295.png)
-
-
-
