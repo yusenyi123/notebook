@@ -1,4 +1,4 @@
-# openwrt防火墙设置不懂的点
+# openwrt防火墙界面的设置
 
 ## 1. 基本设置中的转发规则会改变filter表中forward链的基本规则
 
