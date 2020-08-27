@@ -8,7 +8,7 @@
 
 ### 2.1准备软件
 
-#### PicGo软件，一款上传图片的软件，typora现在的版本可以和这个该软件配合轻松自动上传
+#### PicGo软件，一款把图片上传到图床的软件，typora现在的版本可以和这个该软件配合轻松自动上传
 
 如图所示，现在版本可以选择上传服务
 
@@ -28,7 +28,13 @@
 
 原先版本的typora开启图片自动上传需要在Front-matter中进行设置
 
-如在 macOS 上必须开启这个选项，同时在文章的顶部写下如下的 YAML 配置：![image-20200827184053267](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827184053.png) 这样才可以开启自动上传图片的功能。应该是 Typora 的一个 bug ，现在的版本已经修复了
+如在 macOS 上必须开启这个选项，同时在文章的顶部写下如下的 YAML 配置：
+
+![image-20200827170802640](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827170802.png)
+
+------
+
+![image-20200827184053267](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827184053.png) 这样才可以开启自动上传图片的功能。应该是 Typora 的一个 bug ，现在的版本已经修复了
 
 ==现在的版本已经不需要在Front-matter中进行配置来实现自动上传！！！==
 
@@ -42,7 +48,7 @@
 
 ------
 
-![image-20200827170802640](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827170802.png)
+
 
 ##### Front-matter介绍
 
