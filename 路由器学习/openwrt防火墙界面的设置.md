@@ -88,9 +88,9 @@ iptables -t nat  -A POSTROUTING -o wlan1 -j MASQUERADE
 
 ------
 
-#### 2.forward选项作用，在filter表中的forward链增加规则
+#### 2.转发/forward选项作用，在filter表中的forward链增加规则
 
-==FORWARD选项作用：对于入口是自身接口，出口是自身接口的数据包  该数据包如何处理==
+==转发/FORWARD选项作用：对于入口是自身接口，出口是自身接口的数据包  该数据包如何处理==
 
 ![image-20200823214121244](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163220.png)
 
