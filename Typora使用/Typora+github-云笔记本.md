@@ -204,3 +204,35 @@ https://getquicker.net/Sharedaction?code=bf3da905-e641-4bc8-668d-08d841787f87&fr
 
 ### 4.2 笔记文件名不要太长，太长也会出现上述问题
 
+
+
+
+
+
+
+## 6.额外说明-把图片和笔记分开存放
+
+上面的笔记搭建是图片和笔记都存放在本地，然后一起推送到远程仓库，但这样做有个问题，当我们写了比较多的笔记，这时候图片就会占据大量的空间，github一个仓库1G（超过1G会收到邮件），gitee一个仓库500M（gitee免费用户总容量5G）
+
+![image-20200827114325657](../assets/Typora+github-云笔记本/image-20200827114325657.png)
+
+
+
+
+
+https://docs.github.com/en/github/managing-large-files/what-is-my-disk-quota
+
+![image-20200827120912612](../assets/Typora+github-云笔记本/image-20200827120912612.png)
+
+所以这里我们可以把图片和笔记分开存放，图片存放在多个图片仓库中，笔记就用单独的笔记仓库，这样1G的笔记仓库能够容纳非常多的文本了基本用不完
+
+
+
+但上述方式就需要在写笔记的时候先进行图片的上传，使用picgo工具进行笔记上传到github仓库
+
+
+
+配置文字版说明：https://www.flighty.cn/html/tutorial/20200217_576.html
+
+视频说明：https://www.bilibili.com/video/BV1TE411w758?t=73
+
