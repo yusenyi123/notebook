@@ -80,7 +80,7 @@ option ipaddr '192.168.1.88'
 	
 ```
 
-![image-20200821183427203](../assets/openwrt配置文件详解/image-20200821183427203.png)
+![image-20200821183427203](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164702.png)
 
 ```
 root@LEDE:~# ifconfig 

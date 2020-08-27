@@ -8,19 +8,19 @@
 
 #### 2.在网络，无线界面选择你想要使用的无线网卡(现在的路由器一般都有5g和2.4g两个网卡，选择一个进行连接)点击搜索
 
-![image-20200821200558873](../assets/openwrt无线互联/image-20200821200558873.png)
+![image-20200821200558873](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164316.png)
 
 #### 3.找到你需要连接的主路由器的网络，点击加入网络
 
-![image-20200821200724147](../assets/openwrt无线互联/image-20200821200724147.png)
+![image-20200821200724147](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164322.png)
 
 #### 4.输入需要加入的无线网络的wifi密码，分配防火墙区域为wan
 
-![image-20200821204752718](../assets/openwrt无线互联/image-20200821204752718.png)
+![image-20200821204752718](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164330.png)
 
 #### 5.保存应用，就完成上网了
 
-![image-20200821200916217](../assets/openwrt无线互联/image-20200821200916217.png)
+![image-20200821200916217](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164337.png)
 
 ## 2. 中继模式
 
@@ -48,11 +48,11 @@ opkg remove 卸载已经安装的指定的软件包
 
 ```
 
-![image-20200821210349819](../assets/openwrt无线互联/image-20200821210349819.png)
+![image-20200821210349819](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164344.png)
 
 也可以在管理界面安装,先进行软件包更新在进行搜索，不然会找不到
 
-![image-20200821152848280](../assets/openwrt无线互联/image-20200821152848280.png)
+![image-20200821152848280](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164353.png)
 
 ### 概念
 
@@ -69,7 +69,7 @@ config interface 'wan'
 
 
 
-![image-20200821195229405](../assets/openwrt无线互联/image-20200821195229405.png)在openwrt系统中这个接口是概念上的接口（并不是物理接口，而是物理接口需要统一遵循的规范）可以理解成一个虚拟的网卡，我们把物理网卡==（包括物理网卡自身产生的虚拟网卡接口，如无线网卡就可以产生多个虚拟的无线接口）==添加到这个虚拟网卡上，物理网卡遵循这个虚拟网卡的配置，这个接口如果设置类型为bridge，那么则表示多个物理网卡相连统一由一个虚拟网卡进行管理
+![image-20200821195229405](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164358.png)在openwrt系统中这个接口是概念上的接口（并不是物理接口，而是物理接口需要统一遵循的规范）可以理解成一个虚拟的网卡，我们把物理网卡==（包括物理网卡自身产生的虚拟网卡接口，如无线网卡就可以产生多个虚拟的无线接口）==添加到这个虚拟网卡上，物理网卡遵循这个虚拟网卡的配置，这个接口如果设置类型为bridge，那么则表示多个物理网卡相连统一由一个虚拟网卡进行管理
 
 因为桥接设置是在接口内部进行设置，所以桥接只针对于在物理网卡（包括物理接口自身产生的虚拟接口）、
 
@@ -83,9 +83,9 @@ config interface 'wan'
 
 解决：需要新建一个接口，这个接口的协议是中继桥协议，这样通过这个接口就能把另外两个接口互联起来
 
-![image-20200821194009418](../assets/openwrt无线互联/image-20200821194009418.png)
+![image-20200821194009418](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164406.png)
 
-![image-20200821195752487](../assets/openwrt无线互联/image-20200821195752487.png)
+![image-20200821195752487](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164413.png)
 
 ### 实现步骤
 
@@ -97,34 +97,34 @@ config interface 'wan'
 
 #### 2.在网络，无线界面选择你想要使用的无线网卡(现在的路由器一般都有5g和2.4g两个网卡，选择一个进行连接)点击搜索
 
-![image-20200821200558873](../assets/openwrt无线互联/image-20200821200558873.png)
+![image-20200821200558873](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164422.png)
 
 #### 3.找到你需要连接的主路由器的网络，点击加入网络
 
-![image-20200821200724147](../assets/openwrt无线互联/image-20200821200724147.png)
+![image-20200821200724147](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164429.png)
 
 #### 4.输入需要加入的无线网络的wifi密码，分配防火墙区域为lan
 
-![image-20200821200815386](../assets/openwrt无线互联/image-20200821200815386.png)
+![image-20200821200815386](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164440.png)
 
 #### 5.保存应用
 
-![image-20200821200916217](../assets/openwrt无线互联/image-20200821200916217.png)
+![image-20200821200916217](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164446.png)
 
 #### 6.网络-接口，点击添加新接口
 
-![image-20200821201003186](../assets/openwrt无线互联/image-20200821201003186.png)
+![image-20200821201003186](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164455.png)
 
 #### 7.随意输出接口名字，选择接口桥协议进行创建
 
-![image-20200821202708326](../assets/openwrt无线互联/image-20200821202708326.png)
+![image-20200821202708326](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164502.png)
 
 #### 8.如下配置，保存应用就完成了
 
-![image-20200821202747545](../assets/openwrt无线互联/image-20200821202747545.png)
+![image-20200821202747545](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164508.png)
 
 #### 9.确保网络-防火墙 按照下图配置
 
-![image-20200821203114219](../assets/openwrt无线互联/image-20200821203114219.png)
+![image-20200821203114219](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164515.png)
 
 #### 10. 重启一下路由器

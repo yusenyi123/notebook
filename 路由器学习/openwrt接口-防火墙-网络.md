@@ -16,7 +16,7 @@
 
 ==常规设置中的入站数据，出站数据，转发分别对应iptables中的filter表的input链，output链，forward链中的默认规则==
 
-![image-20200822192216984](../assets/openwrt接口-防火墙-网络/image-20200822192216984.png)
+![image-20200822192216984](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164716.png)
 
 ==区域是防火墙规则的集合，区域中的规则比常规规则优先，优先匹配区域中的规则==
 
@@ -24,7 +24,7 @@
 
 防火墙规在区域内可以设置下面几项
 
-![image-20200823120848056](../assets/openwrt接口-防火墙-网络/image-20200823120848056.png)
+![image-20200823120848056](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164724.png)
 
 
 
@@ -42,4 +42,4 @@
 
 
 
-![image-20200822192604578](../assets/openwrt接口-防火墙-网络/image-20200822192604578.png)
+![image-20200822192604578](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164731.png)
