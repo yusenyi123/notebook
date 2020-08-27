@@ -1,7 +1,3 @@
----
-typora-copy-images-to: upload
----
-
 # Typora+github-云笔记本优化版
 
 ## 1.优化原因
@@ -94,4 +90,4 @@ date: 2013/7/13 20:46:25
 
 
 
-### 2.PigGo配置github视频说明：https://www.bilibili.com/video/BV1TE411w758?t=73
+#### 2.PigGo配置github视频说明：https://www.bilibili.com/video/BV1TE411w758?t=73
