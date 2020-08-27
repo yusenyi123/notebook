@@ -12,21 +12,21 @@
 
 ###     2.1   把EFI和grub2两个文件放到ESP分区的根目录 如下图
 
-![image-20200810135243141](../assets/grub2安装和引导vhd中的ubuntu/image-20200810135243141.png)
+![image-20200810135243141](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163625.png)
 
 ###       2.2   使用EasyUEFI添加UEFI启动项
 
-![image-20200810135728178](../assets/grub2安装和引导vhd中的ubuntu/image-20200810135728178.png)
+![image-20200810135728178](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163631.png)
 
 ## 3. 这一个磁盘下面创建ubuntu文件夹，把 UBT-small.vhd   vmlinuz   initrd.img  三个文件放在该文件夹下
 
-![image-20200810140959369](../assets/grub2安装和引导vhd中的ubuntu/image-20200810140959369.png)
+![image-20200810140959369](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163639.png)
 
 ## 4. 配置grub2菜单文件 
 
 ### 4.1  修改下吗的gurbefi.cfg添加菜单项
 
-![image-20200810140114349](../assets/grub2安装和引导vhd中的ubuntu/image-20200810140114349.png)
+![image-20200810140114349](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163645.png)
 
 ### 4.2 添加下列菜单代码
 
@@ -52,5 +52,5 @@ fi
 
 ~~~
 
-![image-20200810140715567](../assets/grub2安装和引导vhd中的ubuntu/image-20200810140715567.png)
+![image-20200810140715567](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163704.png)
 

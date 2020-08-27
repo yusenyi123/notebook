@@ -10,7 +10,7 @@ sudo nautilus
 
 把modify文件夹下的文件  ，需要解包的固件  ， pppd文件都放在该文件夹下
 
-![image-20200826122931537](../../assets/解包打包padavan系统/image-20200826122931537.png)
+![image-20200826122931537](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163018.png)
 
 ```
 依次执行以下命令
@@ -43,9 +43,9 @@ cd ~/firmware
 
 ```
 
-![image-20200826123059955](../../assets/解包打包padavan系统/image-20200826123059955.png)
+![image-20200826123059955](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163028.png)
 
-![image-20200826125725375](../../assets/解包打包padavan系统/image-20200826125725375.png)
+![image-20200826125725375](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163034.png)
 
-![image-20200826125930498](../../assets/解包打包padavan系统/image-20200826125930498.png)
+![image-20200826125930498](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163042.png)
 

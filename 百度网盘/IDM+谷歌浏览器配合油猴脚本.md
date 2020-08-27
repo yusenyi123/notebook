@@ -4,9 +4,9 @@
 
 [https://greasyfork.org/zh-CN/scripts/378301-%E7%BD%91%E7%9B%98%E5%8A%A9%E6%89%8B](https://greasyfork.org/zh-CN/scripts/378301-网盘助手)
 
-![image-20200820200337271](../assets/IDM+谷歌浏览器配合油猴脚本md/image-20200820200337271.png)
+![image-20200820200337271](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827162850.png)
 
-![image-20200820200313190](../assets/IDM+谷歌浏览器配合油猴脚本md/image-20200820200313190.png)
+![image-20200820200313190](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827162858.png)
 
 ## 脚本2
 
@@ -14,4 +14,4 @@
 
 
 
-![image-20200820200441734](../assets/IDM+谷歌浏览器配合油猴脚本md/image-20200820200441734.png)
+![image-20200820200441734](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827162907.png)

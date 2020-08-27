@@ -4,7 +4,7 @@
 
 ## 关于openwrt接口的概念
 
-![image-20200824204253906](../assets/openwrt中继的一些思考/image-20200824204253906.png)
+![image-20200824204253906](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164131.png)
 
 
 
@@ -24,7 +24,7 @@
 
 ==那如何实现在openwrt中两个同网段接口构成的局域网直接数据流通，使用relayd进程 就可以实现同网段接口数据包的流通，这个relayd进程的作用就好像一根导线 连通了两个交换机（这两个交换机就是那两个同网段接口构成的局域网，我把他们看成两个分离的交换机，但他们交换机的局域网网段是相同的）==
 
-![image-20200824212127973](../assets/openwrt中继的一些思考/image-20200824212127973.png)
+![image-20200824212127973](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164148.png)
 
 ## padavan和openwrt无线中继的区别
 
@@ -42,11 +42,11 @@ padavan的无线中继是全部设备真正的在同一个局域网中
 
 按照下图设置，客户端的wifi断开就会断开
 
-![image-20200824100457342](../assets/openwrt中继的一些思考/image-20200824100457342.png)
+![image-20200824100457342](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164154.png)
 
 也正是因为不能使用桥接，导致这个虚拟的wifi客户端端口不能和本身路由器上的其他端口构成交换机，也就无法和连接在其他端口上的设备构成局域网了（这种情况下就只能变成无线桥接的方式，无线中继的思路就不对了）
 
-![image-20200824105054337](../assets/openwrt中继的一些思考/image-20200824105054337.png)
+![image-20200824105054337](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164200.png)
 
 
 
@@ -56,15 +56,15 @@ padavan的无线中继是全部设备真正的在同一个局域网中
 
 openwrt中的一个网络就是一个虚拟网卡+连接在这个虚拟网卡下的端口
 
-![image-20200824111541778](../assets/openwrt中继的一些思考/image-20200824111541778.png)
+![image-20200824111541778](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164206.png)
 
-![image-20200824111123587](../assets/openwrt中继的一些思考/image-20200824111123587.png)
+![image-20200824111123587](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164217.png)
 
 
 
 路由器根据虚拟网卡所在的局域网自动生成路由表，当一个数据包到来的时候就根据路由表进行查询
 
-![image-20200824105251402](../assets/openwrt中继的一些思考/image-20200824105251402.png)
+![image-20200824105251402](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164211.png)
 
 ```
 
@@ -89,8 +89,8 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 
 win10 在联网的情况下当编程器插上的时候会自动安装驱动
 
-![image-20200825114539561](../assets/openwrt中继的一些思考/image-20200825114539561.png)
+![image-20200825114539561](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164224.png)
 
-![image-20200825114615331](../assets/openwrt中继的一些思考/image-20200825114615331.png)
+![image-20200825114615331](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164233.png)
 
-![image-20200825103855295](../assets/openwrt中继的一些思考/image-20200825103855295.png)
+![image-20200825103855295](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164242.png)

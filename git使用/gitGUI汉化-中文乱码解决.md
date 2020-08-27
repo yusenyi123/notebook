@@ -8,7 +8,7 @@
 
 
 
-![image-20200814195421033](../assets/gitGUI汉化-中文乱码解决/image-20200814195421033.png)
+![image-20200814195421033](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827162819.png)
 
 ### 1.2 在这个目录下的msgs文件夹中放入汉化文件zh_cn.msg(如果没有msgs文件夹就自己新建一个)
 
@@ -16,7 +16,7 @@
 
 ## 2. 中文乱码解决（没有设置过编码，导致中文会显示乱码）
 
-![image-20200814195756072](../assets/gitGUI汉化-中文乱码解决/image-20200814195756072.png)
+![image-20200814195756072](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827162826.png)
 
 ```
 git config --global core.quotepath false          # 显示 status 编码 

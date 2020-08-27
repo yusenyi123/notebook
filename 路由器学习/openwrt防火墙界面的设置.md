@@ -4,19 +4,19 @@
 
 ### 当基本设置转发设置为拒绝
 
-![image-20200823210001958](../assets/openwrt不懂的点/image-20200823210001958.png)
+![image-20200823210001958](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163054.png)
 
 ------
 
-![image-20200823210033832](../assets/openwrt不懂的点/image-20200823210033832.png)
+![image-20200823210033832](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163101.png)
 
 ### 当基本设置转发设置同意
 
-![image-20200823210132989](../assets/openwrt不懂的点/image-20200823210132989.png)
+![image-20200823210132989](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163109.png)
 
 ------
 
-![image-20200823210117126](../assets/openwrt不懂的点/image-20200823210117126.png)
+![image-20200823210117126](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163115.png)
 
 
 
@@ -26,17 +26,17 @@
 
 ### full cone nat开启添加的规则
 
-![image-20200823111642675](../assets/openwrt不懂的点/image-20200823111642675.png)
+![image-20200823111642675](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163127.png)
 
 ### MSS钳制开启添加的规则
 
 MSS（Maximum Segment Size，最大报文长度），是TCP协议定义的一个选项，MSS选项用于在TCP连接建立时，收发双方协商通信时每一个报文段所能承载的最大数据长度。
 
-![image-20200823112901749](../assets/openwrt不懂的点/image-20200823112901749.png)
+![image-20200823112901749](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163133.png)
 
 ------
 
-![image-20200823112922998](../assets/openwrt不懂的点/image-20200823112922998.png)
+![image-20200823112922998](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163140.png)
 
 
 
@@ -44,11 +44,11 @@ MSS（Maximum Segment Size，最大报文长度），是TCP协议定义的一个
 
 ### IP动态伪装开启添加的规则
 
-![image-20200823114949440](../assets/openwrt不懂的点/image-20200823114949440.png)
+![image-20200823114949440](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163146.png)
 
 ------
 
-![image-20200823114907311](../assets/openwrt不懂的点/image-20200823114907311.png)
+![image-20200823114907311](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163152.png)
 
 
 
@@ -66,7 +66,7 @@ iptables -t nat  -A POSTROUTING -o wlan1 -j MASQUERADE
 
 下图就表示允许newzone中接口出来的数据转发到newzone2中的接口
 
-![image-20200823213710477](../assets/openwrt不懂的点/image-20200823213710477.png)
+![image-20200823213710477](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163201.png)
 
 
 
@@ -74,7 +74,7 @@ iptables -t nat  -A POSTROUTING -o wlan1 -j MASQUERADE
 
 上述选项产生的规则
 
-![image-20200823212817355](../assets/openwrt不懂的点/image-20200823212817355.png)
+![image-20200823212817355](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163206.png)
 
 
 
@@ -82,7 +82,7 @@ iptables -t nat  -A POSTROUTING -o wlan1 -j MASQUERADE
 
 下图表示newzone2中接口没有设置允许转发的接口，采用基本设置中转发的策略，==不要被后面的reject给迷惑，后面的reject是表示该区域forward选项选择了reject==
 
-![image-20200823213827509](../assets/openwrt不懂的点/image-20200823213827509.png)
+![image-20200823213827509](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163212.png)
 
 
 
@@ -92,11 +92,11 @@ iptables -t nat  -A POSTROUTING -o wlan1 -j MASQUERADE
 
 ==FORWARD选项作用：对于入口是自身接口，出口是自身接口的数据包  该数据包如何处理==
 
-![image-20200823214121244](../assets/openwrt不懂的点/image-20200823214121244.png)
+![image-20200823214121244](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163220.png)
 
 选项为同意时候的规则
 
-![image-20200823212938351](../assets/openwrt不懂的点/image-20200823212938351.png)
+![image-20200823212938351](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163226.png)
 
 
 
@@ -104,7 +104,7 @@ iptables -t nat  -A POSTROUTING -o wlan1 -j MASQUERADE
 
 选项为拒绝时候的规则
 
-![image-20200823213158885](../assets/openwrt不懂的点/image-20200823213158885.png)
+![image-20200823213158885](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163232.png)
 
 #### 3.入站数据/input 选项，在filter表中的input链增加规则
 
@@ -120,29 +120,29 @@ iptables -t nat  -A POSTROUTING -o wlan1 -j MASQUERADE
 
 
 
-![image-20200823214719829](../assets/openwrt不懂的点/image-20200823214719829.png)
+![image-20200823214719829](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163237.png)
 
 
 
 ------
 
-![image-20200823214810958](../assets/openwrt不懂的点/image-20200823214810958.png)
+![image-20200823214810958](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163244.png)
 
 #### 4.出站数据/output 选项，在filter表中的output链增加规则
 
 ==出站数据/output 选项作用：对于流出当前接口的数据，即数据包的来源mac地址是该接口  该数据包如何处理==
 
-![image-20200823214931191](../assets/openwrt不懂的点/image-20200823214931191.png)
+![image-20200823214931191](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163250.png)
 
 
 
 ------
 
-![image-20200823215003569](../assets/openwrt不懂的点/image-20200823215003569.png)
+![image-20200823215003569](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163257.png)
 
 ## 3.状态栏中的防火墙和路由表中的内容
 
-![image-20200823114550347](../assets/openwrt不懂的点/image-20200823114550347.png)
+![image-20200823114550347](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163303.png)
 
 
 

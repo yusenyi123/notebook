@@ -22,7 +22,7 @@ iptables -t raw  -L --line -nv
 iptables -t filter  -L --line -nv 
 ```
 
-![image-20200822110612483](../../assets/iptables查看/image-20200822110612483.png)
+![image-20200822110612483](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827162925.png)
 
 ```
 num:规则序号
@@ -382,7 +382,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 
 ```
 
-![image-20200823220918160](../../assets/iptables查看/image-20200823220918160.png)
+![image-20200823220918160](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827162936.png)
 
 
 

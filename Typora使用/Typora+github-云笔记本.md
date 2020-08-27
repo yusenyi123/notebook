@@ -20,19 +20,19 @@ Markdown 是用来编写结构化文档的一种纯文本格式，它使我们�
 
 ==图像设置这样做的目的是：为了让我们这托管的网站查看我们的笔记的时候也能看到笔记中的图片==
 
-![image-20200815115209812](E:\Typora学习笔记\assets\Typora+github-云笔记本\image-20200815115209812.png)
+![image-20200815115209812](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827135434.png)
 
-![image-20200815115251679](E:\Typora学习笔记\assets\Typora+github-云笔记本\image-20200815115251679.png  "我的笔记本文件夹概况")
+![image-20200815115251679](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827135449.png  "我的笔记本文件夹概况")
 
 
 
-![image-20200815204132133](E:\Typora学习笔记\assets\Typora+github-云笔记本\image-20200815204132133.png)
+![image-20200815204132133](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827135505.png)
 
 
 
 ### 2.2 Markdown语法设置，就按照我图片这里设置就行，把大部分功能打开
 
-![image-20200815114737291](E:\Typora学习笔记\assets\Typora+github-云笔记本\image-20200815114737291.png)
+![image-20200815114737291](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827135456.png)
 
 ## 3. Git安装 用github托管我们的笔记
 
@@ -118,25 +118,25 @@ setx PATH "%PATH%;E:\git\cmd" /m
 $Env:path=$Env:Path+";E:\git\cmd"  
 ```
 
-![image-20200815203025258](E:\Typora学习笔记\assets\Typora+github-云笔记本\image-20200815203025258.png  ".ssh文件夹下的文件" )
+![image-20200815203025258](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827135726.png  ".ssh文件夹下的文件" )
 
 ### 3.3 将ssh公钥添加到github的sshkeys中
 
-![image-20200815203507450](E:\Typora学习笔记\assets\Typora+github-云笔记本\image-20200815203507450.png)
+![image-20200815203507450](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827135521.png)
 
-![image-20200815203153944](E:\Typora学习笔记\assets\Typora+github-云笔记本\image-20200815203153944.png)
+![image-20200815203153944](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827135752.png)
 
-![image-20200815203229265](E:\Typora学习笔记\assets\Typora+github-云笔记本\image-20200815203229265.png)
+![image-20200815203229265](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827135529.png)
 
 ### 3.4  在github中新建仓库，获取仓库的ssh链接
 
-![image-20200815203907551](E:\Typora学习笔记\assets\Typora+github-云笔记本\image-20200815203907551.png)
+![image-20200815203907551](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827135541.png)
 
 
 
-![image-20200815203948987](E:\Typora学习笔记\assets\Typora+github-云笔记本\image-20200815203948987.png)
+![image-20200815203948987](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827135808.png)
 
-![image-20200815204033936](E:\Typora学习笔记\assets\Typora+github-云笔记本\image-20200815204033936.png)
+![image-20200815204033936](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827135549.png)
 
 
 
@@ -182,7 +182,7 @@ git push  git@gitee.com:yusenyi/notebook.git master
 
 https://getquicker.net/Sharedaction?code=bf3da905-e641-4bc8-668d-08d841787f87&fromMyShare=true
 
-![image-20200816114349589](E:\Typora学习笔记\assets\Typora+github-云笔记本\image-20200816114349589.png)
+![image-20200816114349589](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827135556.png)
 
 ### 4.2 一键同步脚本使用
 
@@ -214,7 +214,7 @@ https://getquicker.net/Sharedaction?code=bf3da905-e641-4bc8-668d-08d841787f87&fr
 
 上面的笔记搭建是图片和笔记都存放在本地，然后一起推送到远程仓库，但这样做有个问题，当我们写了比较多的笔记，这时候图片就会占据大量的空间，github一个仓库1G（超过1G会收到邮件），gitee一个仓库500M（gitee免费用户总容量5G）
 
-![image-20200827114325657](E:\Typora学习笔记\assets\Typora+github-云笔记本\image-20200827114325657.png)
+![image-20200827114325657](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827135606.png)
 
 
 
@@ -222,7 +222,7 @@ https://getquicker.net/Sharedaction?code=bf3da905-e641-4bc8-668d-08d841787f87&fr
 
 https://docs.github.com/en/github/managing-large-files/what-is-my-disk-quota
 
-![image-20200827120912612](E:\Typora学习笔记\assets\Typora+github-云笔记本\image-20200827120912612.png)
+![image-20200827120912612](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827135616.png)
 
 所以这里我们可以把图片和笔记分开存放，图片存放在多个图片仓库中，笔记就用单独的笔记仓库，这样1G的笔记仓库能够容纳非常多的文本了基本用不完
 
