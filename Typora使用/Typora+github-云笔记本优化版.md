@@ -88,10 +88,10 @@ date: 2013/7/13 20:46:25
 
 ### 2.2 实际步骤
 
-typora图像设置如下图所示
+#### 1.typora图像设置如下图所示
 
 ![image-20200827174334310](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827174334.png)
 
 
 
-PigGo配置github视频说明：https://www.bilibili.com/video/BV1TE411w758?t=73
+### 2.PigGo配置github视频说明：https://www.bilibili.com/video/BV1TE411w758?t=73
