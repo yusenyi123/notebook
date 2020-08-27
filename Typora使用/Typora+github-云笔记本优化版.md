@@ -85,3 +85,13 @@ typora-copy-images-to: upload
 ![image-20200827171811826](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827171811.png)
 
 ==也就是把路径中的中文进行转义，因为某些软件可能无法识别中文会产生乱码==
+
+### 2.2 实际步骤
+
+typora图像设置如下图所示
+
+![image-20200827174334310](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827174334.png)
+
+
+
+PigGo配置github视频说明：https://www.bilibili.com/video/BV1TE411w758?t=73
