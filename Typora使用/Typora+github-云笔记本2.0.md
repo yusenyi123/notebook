@@ -1,4 +1,4 @@
-# Typora+github-云笔记本优化版
+# Typora+github-云笔记本2.0版本
 
 ## 1.优化原因
 
