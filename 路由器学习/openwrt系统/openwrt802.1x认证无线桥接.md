@@ -1,5 +1,7 @@
 # openwrt802.1x认证无线桥接
 
+参考：http://www.openwrt.pro/post-209.html
+
 ## 需要解决的问题：
 
 主要就是openwrt路由器默认的wifi桥接的时候没有802.1x认证的选项
