@@ -10,19 +10,6 @@
 
 ### 一些知识
 
-进行802.1X认证需要安装两个软件包：wpa_supplicant与wpa_cli
-
-wpa_supplicant进行认证，wpa_cli进行认证后的操作（查看状态、注销等）。
-
-wpa_supplicant包含在wpad中，但由于OpenWrt已经默认安装wpad-mini，我们需要先卸载wpad-mini再进行安装。
-
-```
-opkg update
-opkg remove wpad-mini
-opkg install wpad
-opkg install wpa-cli
-```
-
 
 
 ```
@@ -51,6 +38,19 @@ Ctrl_interface套接字的路径(每个接口。仅在-c不是时使用)。
 ```
 
 ### 步骤
+
+进行802.1X认证需要安装两个软件包：wpa_supplicant与wpa_cli
+
+wpa_supplicant进行认证，wpa_cli进行认证后的操作（查看状态、注销等）。
+
+wpa_supplicant包含在wpad中，但由于OpenWrt已经默认安装wpad-mini，我们需要先卸载wpad-mini再进行安装。
+
+```
+opkg update
+opkg remove wpad-mini
+opkg install wpad
+opkg install wpa-cli
+```
 
 在/etc/config/wireless文件中添加
 
@@ -82,8 +82,12 @@ config wifi-iface 'stacfg'
 参数根据实际情况修改上面的配置
 
 
-修改完成后执行
-/etc/init.d/network restart
         
+```
+
+修改完成后执行
+
+```
+/etc/init.d/network restart
 ```
 
