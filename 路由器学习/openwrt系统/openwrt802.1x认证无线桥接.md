@@ -10,8 +10,6 @@
 
 ### 一些知识
 
-
-
 ```
 wpad wpa_supplicant -b br-wan -i wlan0-1 -D nl80211 -c /etc/staff.conf
 
@@ -91,3 +89,4 @@ config wifi-iface 'stacfg'
 /etc/init.d/network restart
 ```
 
+关闭路由器重启
