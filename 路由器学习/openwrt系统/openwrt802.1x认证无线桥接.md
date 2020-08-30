@@ -39,7 +39,7 @@ Ctrl_interface套接字的路径(每个接口。仅在-c不是时使用)。
 
 ### 步骤
 
-进行802.1X认证需要安装两个软件包：wpa_supplicant与wpa_cli
+进行无线桥接802.1X认证需要安装两个软件包：wpa_supplicant与wpa_cli
 
 wpa_supplicant进行认证，wpa_cli进行认证后的操作（查看状态、注销等）。
 
