@@ -1575,6 +1575,14 @@ XXXXXXXXX 为版本号 与/boot 目录下的  vmlinuz-XXXXXXXXX-generic  对应
 
 ### 5. 打包生成的文件
 
+==注意这里要生成当前系统正在运行的内核所对应的版本的文件，一般都是/boot目录下最新的内核，然后把生成文件和最新内核==
+
+==内核可能正在运行，在root模式下复制然后修改权限后就可以移到真机==
+
+
+
+
+
 把这里生成的文件 initrd.img--XXXXXXXXX-generic 与 /boot/下 的文件 vmlinuz-XXXXXXXXX-generic
 和我们系统存放的vhd文件 一共三个文件拷贝或移动到一个NTFS分区根目录下一个名叫ubuntu子目录中
 
