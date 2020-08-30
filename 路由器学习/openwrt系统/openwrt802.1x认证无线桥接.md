@@ -55,18 +55,8 @@ opkg install wpa-cli
 在/etc/config/wireless文件中添加
 
 ```
-config wifi-iface 'stacfg'   
-        option device 'radio0'
-        option mode 'sta'
-        option network 'wan'        
-        option ssid 'UMRnet_staff'      #修改成需要连接的wifi名字
-        option encryption 'wpa2         #需要连接的wifi的加密方式
-        option identity 'yourname@staff.uni-marburg.de'    #连接wifi时候你的用户名
-        option password 'yourpassword'        #连接wifi时候你的密码
-        option eap_type 'peap'     #该wifi设置的802.1x的扩展认证协议类型（英語：Extensible Authentication Protocol）
-        option auth 'MSCHAPV2'    ##该wifi设置的802.1x的认证协议类型
 
-
+模板
 config wifi-iface 'stacfg'
         option device 'radio0'
         option mode 'sta'
@@ -78,6 +68,17 @@ config wifi-iface 'stacfg'
         option eap_type 'peap'
         option auth 'MSCHAPV2'
 
+模板中需要修改的地方
+config wifi-iface 'stacfg'   
+        option device 'radio0'
+        option mode 'sta'
+        option network 'wan'        
+        option ssid 'UMRnet_staff'      #修改成需要连接的wifi名字
+        option encryption 'wpa2         #需要连接的wifi的加密方式
+        option identity 'yourname@staff.uni-marburg.de'    #连接wifi时候你的用户名
+        option password 'yourpassword'        #连接wifi时候你的密码
+        option eap_type 'peap'     #该wifi设置的802.1x的扩展认证协议类型（英語：Extensible Authentication Protocol）
+        option auth 'MSCHAPV2'    ##该wifi设置的802.1x的认证协议类型
 
 参数根据实际情况修改上面的配置
 
