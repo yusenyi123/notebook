@@ -44,6 +44,7 @@ Ctrl_interface套接字的路径(每个接口。仅在-c不是时使用)。
 wpa_supplicant进行认证，wpa_cli进行认证后的操作（查看状态、注销等）。
 
 wpa_supplicant包含在wpad中，但由于OpenWrt已经默认安装wpad-mini，我们需要先卸载wpad-mini再进行安装。
+路由器联网情况下运行下列命令
 
 ```
 opkg update
