@@ -1,12 +1,8 @@
 # git GUI 汉化   git各种中文乱码解决
 
-
-
 ## 1. 汉化
 
 ### 1.1 找到你的Git安装目录下的这个路径:Git\mingw64\share\git-gui\lib
-
-
 
 ![image-20200814195421033](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827162819.png)
 
@@ -26,7 +22,6 @@ git config --global gui.encoding utf-8            # 图形界面编码
 git config --global i18n.commit.encoding utf-8    # 处理提交信息编码 
 git config --global i18n.logoutputencoding utf-8  # 输出 log 编码 
 export LESSCHARSET=utf-8                          # 因为 git log 默认使用 less 分页，所以需要 bash 对 less 命令处理时使用 utf-8 编码 
-
 ```
 
 以上命令与下面在对应文件中添加相应数据等效：
@@ -42,14 +37,11 @@ export LESSCHARSET=utf-8                          # 因为 git log 默认使用 
     logoutputencoding = utf-8
 ```
 
-
 在Git安装目录下的   **/etc/profile**文件中添加
 
 ```
 export LESSCHARSET=utf-8
 ```
-
-
 
 特殊说明
 
@@ -63,6 +55,3 @@ export LESSCHARSET=utf-8
 **i18n.commitencoding = utf-8** 是为了设置 commit log 提交时使用 UTF-8 编码。
 **i18n.logoutputencoding = utf-8** 是为了保证在 **git log** 时使用 UTF-8 编码。
 **export LESSCHARSET=utf-8** 是为了保证 **git log** 翻页时使用 UTF-8 编码，这样就可以正常显示中文了【配合前面的 **i18n.logoutputencoding** 设置】。
-
-
-
