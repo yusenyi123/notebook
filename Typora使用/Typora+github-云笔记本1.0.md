@@ -114,6 +114,12 @@ echo %path%
 set PATH="%PATH%E:\git\cmd" 
 
 setx PATH "%PATH%;E:\git\cmd" /m
+
+
+set命令：这种语法只能在Cmd Shell环境中有效，关闭运行环境环境变量将不保存。
+setx命令：永久设定环境变量。setx设置环境变量后，将在新打开的终端中生效，当前终端不会立即生效。
+/m 表示添加到系统环境变量
+
 /m 表示添加到系统环境变量
 $Env:path=$Env:Path+";E:\git\cmd"  
 ```
