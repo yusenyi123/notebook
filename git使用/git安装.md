@@ -15,3 +15,11 @@
 <mark>134</mark>
 
 ==11==
+
+![](https://raw.githubusercontent.com/yusenyi123/pictures2/master/2020/09/02-09-21-58-2020-09-02-09-21-35-image.png)
+
+![](https://raw.githubusercontent.com/yusenyi123/pictures2/master/2020/09/02-09-24-23-2020-09-02-09-24-06-image.png)
+
+# 打大蛇
+
+![](https://raw.githubusercontent.com/yusenyi123/pictures2/master/2020/09/02-09-34-05-2020-09-02-09-33-29-image.png)
