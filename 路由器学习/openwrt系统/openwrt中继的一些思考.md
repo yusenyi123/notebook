@@ -94,3 +94,7 @@ win10 在联网的情况下当编程器插上的时候会自动安装驱动
 ![image-20200825114615331](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164233.png)
 
 ![image-20200825103855295](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827164242.png)
+
+
+
+![image-20200912211445831](C:\Users\sen\AppData\Roaming\Typora\typora-user-images\image-20200912211445831.png)
