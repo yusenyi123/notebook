@@ -135,7 +135,7 @@ sshd
 uname -m
 uname -a
 
-#下载frp软件，我手机是aarch64架构也就是arm64架构
+#下载对应手机cpu架构的frp软件，我手机是aarch64架构也就是arm64架构
 wget https://github.com/fatedier/frp/releases/download/v0.33.0/frp_0.33.0_linux_arm64.tar.gz -O ./frp.tar.gz
 
 #创建目录
@@ -159,7 +159,7 @@ privilege_token=5201314
 
 [mytcp1]
 type = tcp
-local_ip = 192.168.1.105
+local_ip = 192.168.1.105 #当前手机内网ip,不能写127.0.0.1
 local_port = 6374
 remote_port = 6374
 
