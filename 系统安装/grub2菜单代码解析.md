@@ -1,5 +1,13 @@
 # grub2菜单代码解析
 
+
+
+## 参考：
+
+http://www.jinbuguo.com/linux/grub.cfg.html
+
+
+
 ## 菜单代码案例
 
 ```

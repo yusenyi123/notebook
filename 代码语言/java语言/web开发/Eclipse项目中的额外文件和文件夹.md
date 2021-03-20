@@ -34,7 +34,7 @@ https://www.eclipse.org/pdt/help/html/setting_the_javascript_build_path.htm
 
 Eclipse项目根目录下通常有两个文件：.project和.classpath，.project是Eclipse项目必须有的文件，而.classpath是Java项目必须有的文件。这两个文件均是XML格式的文本文件，用普通文本编辑器即可打开。
 
-## .project
+## .project(提供了项目的完整描述，可以用来在工作区中它被导出后再次导入时重新创建项目)
 
 .project文件提供了项目的完整描述，可以用来在工作区中它被导出后再次导入时重新创建项目。你的新项目应该和以下类似：
 
@@ -57,13 +57,28 @@ Eclipse项目根目录下通常有两个文件：.project和.classpath，.projec
 </projectDescription> 
 ```
 
+### .project配置文件节点说明
 
+详细说明网址
+
+https://help.eclipse.org/2020-12/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fmisc%2Fproject_description_file.html&cp=2_1_5_11
+
+
+
+https://g.yuque.com/jiujuan/techstack/vgqfxn?language=en-us
 
 ```
 1、<name></name>：工程名/项目名；
 2、<comment></comment>：工程注释描述；
-3、<natures></natures>：运行时需要的额外IDE插件；nature标记表示该项目的类型。这里的nature性质org.eclipse.jdt.core.javanature表示它是Java项目。
-4、<buildSpec></buildSpec> （bulidSpec Build specification  生成规范）<buildSpec>中包含一系列<buildCommand> 
+3、<natures></natures>：运行时需要的额外IDE插件；nature标记表示该项目的类型。
+这里的nature性质为org.eclipse.jdt.core.javanature表示它是Java项目。
+运行时需要的额外Eclipse插件<natures></natures>，及其具体加载方式信息<buildSpec></buildSpec>
+
+
+4、<buildSpec></buildSpec> （bulidSpec    Build specification  生成规范）
+<buildSpec>中包含一系列<buildCommand> 
+
+
 <buildCommand> 包含两个标签<name>和 <arguments> 
 <name>是项目构建命令的名字 
 <arguments> 构建命令初始化时需要传递的参数（一般看到的都是空的）
@@ -94,9 +109,117 @@ org.eclipse.jem.workbench.JavaEMFNature：Web工程需要
 org.eclipse.wst.common.modulecore.ModuleCoreNature：
 ```
 
+```
+对于每个工程，你可以注册了一个nature，它用来关联一个或多个builder。一个builder可以操纵你在Eclipse IDE中的资源，来创建其它的资源文件。
+
+例如Java Builder可以把java 源文件变成class文件。通过org.eclipse.core.resources.builders可以扩展你自己的builder，每一个builder都是IncrementalProjectBuilder的子类，必须实现接口build，当resources有改变时，autobuild会调用build方法。当用户选择“clean” "build"或者“build all”时，都会调用build方法。
+
+builder会包含在.project文件中。
+```
+
+![image-20210304192242382](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210304192242.png)
 
 
 
+```
+The project description file
+Description: When a project is created in the workspace, a project description file is automatically generated that describes the project.  The purpose of this file is to make the project self-describing, so that a project that is zipped up or released to a server can be correctly recreated in another workspace.  This file is always called ".project", and is located as a direct member of the project's content area.  The name of the file is exposed through the static field DESCRIPTION_FILE_NAME on org.eclipse.core.resources.IProjectDescription.
+描述：在工作空间中创建项目时，将自动生成一个描述该项目的项目描述文件。
+此文件的目的是使项目自描述，以便可以在另一个工作空间中正确地创建已压缩或发布到服务器的项目。
+该文件始终称为“ .project”，并且是项目内容区域的直接成员。
+文件名通过org.eclipse.core.resources.IProjectDescription上的静态字段DESCRIPTION_FILE_NAME公开。
+
+The name, location, and content of this file are part of the workspace API.  This means they are guaranteed not to change in a way that would break existing users of the file.  However, the right to add additional elements and attributes to the markup is reserved for possible future additions to the file.  For this reason, clients that read the description file contents should tolerate unknown elements and attributes.
+
+Clients that modify, delete, or replace the project description file do so at their own risk.  Projects with invalid or missing description files will not be generally usable.  If a project with an invalid description file is discovered on workspace startup, the project is closed, and it will not be possible to open it until the project description file has been repaired.  The workspace will not generally attempt to automatically repair a missing or invalid description file.  One exception is that missing project description files will be regenerated during workspace save and on calls to IProject.setDescription.
+
+Modifications to the project description file have mostly the same effect as changing the project description via IProject.setDescription.  One exception is that adding or removing project natures will not trigger the corresponding nature's configure or deconfigure method.  Another exception is that changes to the project name are ignored.
+
+If a new project is created at a location that contains an existing project description file, the contents of that description file will be honoured as the project description.  One exception is that the project name in the file will be ignored if it does not match the name of the project being created.  If the description file on disk is invalid, the project creation will fail.
+
+
+ 
+Configuration Markup:
+
+   <!ELEMENT projectDescription (name, comment, projects, buildSpec, natures, linkedResources)>
+
+   <!ELEMENT name EMPTY>
+
+name - the name of the project.  Ignored if it does match the name of the project using this description.  Corresponds to IProjectDescription.getName().
+   <!ELEMENT comment EMPTY>
+
+comment - a comment for the project.  The comment can have arbitrary contents that are not interpreted by the project or workspace.  Corresponds to IProjectDescription.getComment().
+   <!ELEMENT projects (project)*>
+   <!ELEMENT project EMPTY>
+projects - the names of the projects that are referenced by this project.  Corresponds to IProjectDescription.getReferencedProjects().
+   <!ELEMENT buildSpec (buildCommand)*>
+
+   <!ELEMENT buildCommand (name, arguments)>
+
+   <!ELEMENT name EMPTY>
+
+   <!ELEMENT arguments (dictionary?)>
+
+   <!ELEMENT dictionary (key, value)*>
+
+   <!ELEMENT key EMPTY>
+
+   <!ELEMENT value EMPTY>
+
+buildSpec - the ordered list of build commands for this project.  Corresponds to IProjectDescription.getBuildSpec().
+buildCommand - a single build commands for this project.  Corresponds to org.eclipse.core.resources.ICommand.
+name - the symbolic name of an incremental project builder.  Corresponds to ICommand.getBuilderName().
+arguments - optional arguments that may be passed to the project builder.  Corresponds to ICommand.getArguments().
+dictionary - a list of <key, value> pairs in the argument list.  Analagous to java.util.Map.
+   <!ELEMENT natures (nature)*>
+
+   <!ELEMENT nature EMPTY>
+
+natures - the names of the natures that are on this project.  Corresponds to IProjectDescription.getNatureIds().
+nature - the name of a single natures on this project.
+   <!ELEMENT linkedResources (link)*>
+
+   <!ELEMENT link (name, type, location)>
+
+   <!ELEMENT name EMPTY>
+
+   <!ELEMENT type EMPTY>
+
+   <!ELEMENT location EMPTY>
+
+linkedResources - the list of linked resources for this project.
+link - the definition of a single linked resource.
+name - the project-relative path of the linked resource as it appears in the workspace.
+type - the resource type. Value values are: "1" for a file, or "2" for a folder.
+location - the local file system path of the target of the linked resource. Either an absolute path, or a relative path whose first segment is the name of a workspace path variable.
+locationURI - if the file is not in the local file system, this attribute contains the absolute URI of the resource in some backing file system.
+Examples: The following is a sample project description file.  The project has a single nature and builder configured, and some project references.
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+    <name>WinterProject</name>
+    <comment>This is a cool project.</comment>
+    <projects>
+        <project>org.seasons.sdt</project>
+        <project>CoolStuff</project>
+    </projects>
+    <buildSpec>
+        <buildCommand>
+            <name>org.seasons.sdt.seasonBuilder</name>
+            <arguments>
+                <dictionary>
+                    <key>climate</key>
+                    <value>cold</value>
+                </dictionary>
+            </arguments>
+        </buildCommand>
+    </buildSpec>
+    <natures>
+        <nature>org.seasons.sdt.seasonNature</nature>
+    </natures>
+</projectDescription>
+
+API Information: The contents of the project description file map to the org.eclipse.core.resources.IProjectDescription interface. The project description file can be overwritten by the method IProject.setDescription().
+```
 
 
 
@@ -217,7 +340,7 @@ kind="lib"用于指定project依赖的Referenced Libraries，其中path指定了
 
 .classpath文件中各节点的顺序是通过tab-Order and Export 来控制的，不同的顺序可能会引起加载**class**文件问题，一般是源码放在最前面。 
 
-## .settings文件夹
+## .settings文件夹(各种插件的配置文件)
 
 
 
@@ -239,9 +362,7 @@ org.eclipse.jdt.core.compiler.source=1.7
 
 在eclipse中修改window->Preferences->Java->Compiler的配置 就会修改该文件
 
-![image-20210127221701320](C:\Users\sen\AppData\Roaming\Typora\typora-user-images\image-20210127221701320.png)
-
-
+![image-20210304113923905](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210304113923.png)
 
 ### org.eclipse.wst.common.project.facet.core.xml(当前项目使用了哪些框架)
 

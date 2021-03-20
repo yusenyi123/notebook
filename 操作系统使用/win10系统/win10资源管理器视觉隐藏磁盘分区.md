@@ -35,6 +35,10 @@ Windows Registry Editor Version 5.00
 
 
 
+
+
+
+
 ### 2.取消隐藏的注册表
 
 ```

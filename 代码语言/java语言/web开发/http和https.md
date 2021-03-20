@@ -14,6 +14,49 @@ https://www.jianshu.com/p/29e0ba31fb8d
 
 
 
+### 1.简介
+
+HTTP协议（Hyper Text Transfer Protocol，超文本传输协议）,是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议。
+
+HTTP基于TCP/IP通信协议来传递数据。
+
+HTTP基于客户端/服务端（C/S）架构模型，通过一个可靠的链接来交换信息，是一个无状态的请求/响应协议。
+
+### 2.特点
+
+（1）HTTP是无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。
+
+（2）HTTP是媒体独立的：只要客户端和服务器知道如何处理的数据内容，任何类型的数据都可以通过HTTP发送。客户端以及服务器指定使用适合的MIME-type内容类型。
+
+（3）HTTP是无状态：无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。
+
+ 
+
+### 3.HTTP请求报文构成(HTTP请求报文由3部分组成（请求行+请求头+请求体）)
+![img](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210316115756.jpeg)
+
+#### 请求行：
+
+①是请求方法，GET和POST是最常见的HTTP方法，除此以外还包括DELETE、HEAD、OPTIONS、PUT、TRACE。
+
+②为请求对应的URL地址，它和报文头的Host属性组成完整的请求URL。
+
+③是协议名称及版本号。
+
+#### 请求头：
+
+④是HTTP的报文头，报文头包含若干个属性，格式为“属性名:属性值”，服务端据此获取客户端的信息。
+
+与缓存相关的规则信息，均包含在header中
+
+#### 请求体：
+
+⑤是报文体，它将一个页面表单中的组件值通过param1=value1&param2=value2的键值对形式编码成一个格式化串，它承载多个请求参数的数据。不但报文体可以传递请求参数，请求URL也可以通过类似于“/chapter15/user.html? param1=value1&param2=value2”的方式传递请求参数。 
+
+### 4.HTTP响应报文组成
+
+![image-20210319224402430](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210319224409.png)
+
 
 
 
