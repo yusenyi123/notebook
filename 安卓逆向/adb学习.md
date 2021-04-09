@@ -32,3 +32,13 @@ Android Debug Bridge (adb) 是一个通用命令行工具，其允许我们与�
 一、**PC上为什么要有一个ADB Server，而不是ADB Client 和 ADB Daemon 直接通信呢？**
 
 因为 ADB 是一个需要支持多对多架构的工具，一个PC可以连接多台手机设备或虚拟机，一个手机也可以同时连接多台PC。就需要一个统一的Sever管理多个设备的连接。
+
+```
+java -jar jeb3_19_keygen_0.2.0b.jar 61641164873316763
+adb connect 127.0.0.1:7555
+```
+
+
+
+
+

@@ -24,7 +24,7 @@ vhd（ Virtual Hard Disk 虚拟硬盘）是微软的一种文件类型，叫做�
 
 ## 1. 所需软件
 
-###     windows10镜像 （在msnd网站下载  https://msdn.itellyou.cn/）
+###     windows10镜像 （在msdn网站下载  https://msdn.itellyou.cn/）
 
 ###     BOOTICE64位（修改启动项  挂载和分离vhd虚拟硬盘）
 
@@ -44,5 +44,5 @@ vhd（ Virtual Hard Disk 虚拟硬盘）是微软的一种文件类型，叫做�
 
 VirtualBox启动需要vhd文件处于分离状态（也就是没有挂载的情况）
 
-vmware启动需要vhd文件处于挂载状态
+vmware启动需要vhd文件处于挂载状态，也可以使用分离状态启动
 

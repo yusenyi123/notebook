@@ -24,7 +24,7 @@
 
 ## 4. 配置grub2菜单文件 
 
-### 4.1  修改下吗的gurbefi.cfg添加菜单项
+### 4.1  修改gurbefi.cfg，添加菜单项
 
 ![image-20200810140114349](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827163645.png)
 
