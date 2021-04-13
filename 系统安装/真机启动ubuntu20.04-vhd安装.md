@@ -1586,7 +1586,7 @@ XXXXXXXXX 为版本号 与/boot 目录下的  vmlinuz-XXXXXXXXX-generic  对应
 把这里生成的文件 initrd.img--XXXXXXXXX-generic 与 /boot/下 的文件 vmlinuz-XXXXXXXXX-generic
 和我们系统存放的vhd文件 一共三个文件拷贝或移动到一个NTFS分区根目录下一个名叫ubuntu子目录中
 
-### 6. 配置ubuntu16  vhd启动项 真机启动
+### 6. 配置ubuntu20  vhd启动项 真机启动
 
 ```
 grub2菜单引导模板，根据自己实际情况进行修改，grub2引导程序安装请查看 grub2启动引导vhd中的ubuntu.md 文件

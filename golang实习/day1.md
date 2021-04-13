@@ -24,5 +24,3 @@
 
 ### 5.ubuntu20下更换shell为zsh
 
-
-
