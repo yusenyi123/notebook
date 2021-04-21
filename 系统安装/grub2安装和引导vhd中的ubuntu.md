@@ -1,5 +1,7 @@
 # grub2启动引导vhd中的ubuntu
 
+## 注意：有些电脑需要在bios中关闭安全启动((secure boot)，secure boot选项为disabled才能使用grub2程序引导
+
 ## 1.所需要的软件
 
 ###      1.1  grub2引导程序

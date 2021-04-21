@@ -1588,6 +1588,8 @@ XXXXXXXXX 为版本号 与/boot 目录下的  vmlinuz-XXXXXXXXX-generic  对应
 
 ### 6. 配置ubuntu20  vhd启动项 真机启动
 
+#### 注意：有些电脑需要在bios中关闭安全启动((secure boot)，secure boot选项为disabled才能使用grub2程序引导
+
 ```
 grub2菜单引导模板，根据自己实际情况进行修改，grub2引导程序安装请查看 grub2启动引导vhd中的ubuntu.md 文件
 

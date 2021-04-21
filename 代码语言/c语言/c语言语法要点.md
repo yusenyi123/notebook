@@ -239,3 +239,83 @@ C语言的数组类型中，数组变量名就是地址
 但是在结构体中结构体变量名不是结构体的地址
 ```
 
+
+
+
+
+## typedef 关键字
+
+### typedef使用
+
+```C
+语法:
+typedef 变量类型 别名
+
+举例:
+
+typedef struct Book
+{
+   char  title[50];
+   char  author[50];
+   char  subject[100];
+   int   book_id;
+} Book;
+
+
+int main()
+{
+    Book b1;
+    b1.book_id=1;
+}
+
+
+
+
+
+typedef struct Book
+{
+   char  title[50];
+   char  author[50];
+   char  subject[100];
+   int   book_id;
+} Books[10];
+
+
+int main()
+{
+ Books books;  //这里的Books books  表示 struct  Book  books[10];
+}
+```
+
+
+
+### typedef vs #define
+
+**#define** 是 宏指令，用于为各种数据类型定义别名，与 **typedef** 类似，但是它们有以下几点不同：
+
+- **typedef** 仅限于为类型定义符号名称，**#define** 不仅可以为类型定义别名，也能为数值定义别名，比如您可以定义 1 为 ONE。
+- **typedef** 是由编译器执行解释的，**#define** 语句是由预编译器进行处理的。
+
+下面是 #define 的最简单的用法：
+
+### 实例
+
+```c
+#include <stdio.h>
+ 
+#define TRUE  1
+#define FALSE 0
+ 
+int main( )
+{
+   printf( "TRUE 的值: %d\n", TRUE);
+   printf( "FALSE 的值: %d\n", FALSE);
+ 
+   return 0;
+}
+```
+
+
+
+
+

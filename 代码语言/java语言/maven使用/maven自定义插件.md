@@ -26,7 +26,7 @@ https://cloud.tencent.com/developer/article/1433523
 
 ### mvn命令用法 
 
-####  1. mvn  生命周期阶段    [options]   （本质是执行多个插件）
+####  1. mvn  生命周期阶段    [options]   （本质是执行多个插件） 
 
 举例：
 
@@ -34,6 +34,10 @@ https://cloud.tencent.com/developer/article/1433523
 mvn install
 
 mvn clean  
+
+可以一次性执行多个生命周期
+
+mvn clean package
 ```
 
 
@@ -54,9 +58,9 @@ mvn -f G:\codespace\mavenspace\myplugs1  myplugs1:goal2
 
 ##### mvn命令使用前缀执行原理：
 
-```
-为了简化对插件的调⽤，可以在命令⾏中使⽤前缀指明要执⾏的插件，现在解释⼀下Maven是如何根据插件的前缀找到
-真正的插件的。插件前缀与groupId:artifactId是⼀⼀对应的。这种对应关系保存在仓库的元数据中，这样的元数据为groupId/maven-metadata.xml文件。要准确地解析到插件，还需要解释⼀下这⾥的groupId。前⾯介绍过，⽬前绝⼤部分插件都是放在http://repo1.maven.org和http://repository.codehaus.org中的，它们的groupId对应的是org.apache.maven.plugins和org.codehaus.mojo。Maven在解析插件仓库元数据的时候，会默认使⽤org.apache.maven.plugins和org.codehaus.mojo两个groupId，也就是说，Maven会⾃动检测http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-metadata.xml和http://repository.codehaus.org/org/codehaus/mojo/maven-metadata.xml中的元数据。
+```xml
+为了简化对插件的调⽤，可以在命令⾏中使⽤前缀指明要执⾏的插件，现在解释⼀下Maven是如何根据插件的前缀找到真正的插件的。
+插件前缀与groupId:artifactId是⼀⼀对应的。这种对应关系保存在仓库的元数据中，这样的元数据为groupId/maven-metadata.xml文件。要准确地解析到插件，还需要解释⼀下这⾥的groupId。前⾯介绍过，⽬前绝⼤部分插件都是放在http://repo1.maven.org和http://repository.codehaus.org中的，它们的groupId对应的是org.apache.maven.plugins和org.codehaus.mojo。Maven在解析插件仓库元数据的时候，会默认使⽤org.apache.maven.plugins和org.codehaus.mojo两个groupId，也就是说，Maven会⾃动检测http://repo1.maven.org/maven2/org/apache/maven/plugins/maven-metadata.xml和http://repository.codehaus.org/org/codehaus/mojo/maven-metadata.xml中的元数据。
 元数据文件会被下载到本地文件中，自定义插件install时也会有元数据文件在本地仓库中
  
 当然，也可以告诉Maven从其他仓库中查找，只要在settings.xml中做如下配置。
@@ -65,9 +69,7 @@ mvn -f G:\codespace\mavenspace\myplugs1  myplugs1:goal2
   </pluginGroups>
   
 这样配置后，Maven不仅仅会检测本地仓库中
-org/apache/maven/plugins/maven-metadata.xml、org/codehaus/mojo/maven-metadata.xml，还会检测org/example/maven-metadata.xml
-
-maven-metadata.xml中的内容
+org/apache/maven/plugins/maven-metadata.xml、org/codehaus/mojo/maven-metadata.xml，还会检测org/example/maven-metadata.xml中的内容
 
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -206,7 +208,7 @@ mvn -f G:\codespace\mavenspace\myplugs1  myplugs1:goal2  -Dsex=傻逼
 
 ##### @mojo注解 介绍
 
-```
+```java
 package org.apache.maven.plugins.annotations;
 
 import java.lang.annotation.Documented;
