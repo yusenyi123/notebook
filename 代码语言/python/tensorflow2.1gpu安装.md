@@ -138,6 +138,17 @@ cudatoolkit10.1 需要显卡驱动版本>=418.96
 #### 3.使用conda工具创建一个tensorflow的工作环境
 
 ```
+ 默认下载源下载速度太慢，切换清华下载源
+conda默认使用的国外镜像源速度相对较慢，使用清华的Anaconda仓库镜像，执行下面的命令。
+# 添加清华Anaconda镜像
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+# 显示通道地址
+conda config --set show_channel_urls yes
+
+
+
+
 conda create  -n  tf21  python=3.7
 ```
 

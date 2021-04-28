@@ -1,8 +1,14 @@
 # vmware15安装Mac系统虚拟机
 
+## 参考：
+
+https://blog.csdn.net/qq_43901693/article/details/103723081
+
+https://bbs.kafan.cn/thread-2206082-1-1.html
+
 ## 1.解锁vmware15创建mac系统选项
 
-参考：https://blog.csdn.net/qq_43901693/article/details/103723081
+
 
 ### 1.1安装vmware15，安装很简单，网上教程也很多
 
@@ -18,9 +24,47 @@
 
 ![image-20200828230655814](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200828230655.png)
 
+![image-20210428093510510](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210428093510.png)
+
+```
+总共需要关闭四个进程
+分别是
+1. Vmware Authorization
+
+2. Vmware USB Arbitration
+
+3.vmware-hostd.exe
+
+4.Vmware Tray Process
+```
+
+
+
+
+
 ### 1.3 打开unlocker文件夹，选择win-install.cmd文件以管理员身份运行
 
 ![image-20200828231158531](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200828231158.png)
+
+
+
+> 执行该命令会去下载一个com.vmware.fusion.zip.tar文件
+>
+> 因为unlocker需要com.vmware.fusion.zip.tar文件中的darwin.iso和darwinPre15.iso
+> 但只是需要darwin.iso和darwinPre15.iso这两个文件
+>
+> 方法1:
+>
+> 将 darwin.iso和darwinPre15.iso文件放到unlocker工具的tools文件夹下 (没有tools文件夹就新建一个)
+>
+> 所以我们不需要把com.vmware.fusion.zip.tar这个文件全部下载下列，com.vmware.fusion.zip.tar文件有600M多大小,网速查下载很慢
+>
+> 方法2：
+> 提前下载com.vmware.fusion.zip.tar，放到了unlocker工具的tools文件夹下 (没有tools文件夹就新建一个)
+>
+> com.vmware.fusion.zip.tar下载地址
+>
+> https://softwareupdate.vmware.com/cds/vmw-desktop/fusion/12.1.1/17801503/core/com.vmware.fusion.zip.tar
 
 
 

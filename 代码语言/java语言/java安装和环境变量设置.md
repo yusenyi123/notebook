@@ -1,4 +1,28 @@
-# java环境变量设置
+# java安装和环境变量设置
+
+## 参考
+
+https://my.oschina.net/whiteSpring/blog/4915721
+
+## 不同系统不同cpu下jdk的选择
+
+### linux 查看cpu架构，之后选择对应的linux 版本jdk，windows只有一类jdk
+
+
+
+
+
+使用uname -a命令
+
+```
+[sen@localhost test]$ uname -a
+Linux localhost.localdomain 3.10.0-1160.el7.x86_64 #1 SMP Mon Oct 19 16:18:59 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+
+```
+
+
+
+![image-20210423193047254](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210423193047.png)
 
 
 
