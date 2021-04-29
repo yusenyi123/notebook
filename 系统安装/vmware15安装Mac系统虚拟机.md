@@ -48,25 +48,32 @@ https://bbs.kafan.cn/thread-2206082-1-1.html
 
 
 
-> 执行该命令会去下载一个com.vmware.fusion.zip.tar文件
+> 执行该文件的某个命令会去下载一个com.vmware.fusion.zip.tar文件
 >
 > 因为unlocker需要com.vmware.fusion.zip.tar文件中的darwin.iso和darwinPre15.iso
 > 但只是需要darwin.iso和darwinPre15.iso这两个文件
 >
-> 方法1:
+> 方法:
 >
-> 将 darwin.iso和darwinPre15.iso文件放到unlocker工具的tools文件夹下 (没有tools文件夹就新建一个)
+> 将 darwin.iso文件和darwinPre15.iso文件放到unlocker工具的tools文件夹下 (没有tools文件夹就新建一个)
 >
-> 所以我们不需要把com.vmware.fusion.zip.tar这个文件全部下载下列，com.vmware.fusion.zip.tar文件有600M多大小,网速查下载很慢
+> 运行时提示You already have downloaded the tools. Download again?[y/n]敲n就可以跳过了。
 >
-> 方法2：
-> 提前下载com.vmware.fusion.zip.tar，放到了unlocker工具的tools文件夹下 (没有tools文件夹就新建一个)
+> 
 >
-> com.vmware.fusion.zip.tar下载地址
+> 所以我们不需要把com.vmware.fusion.zip.tar这个文件全部下载下来，com.vmware.fusion.zip.tar文件有600M多大小,网速差，下载很慢
+>
+> com.vmware.fusion.zip.tar文件下载地址，下载后解压获得darwin.iso文件和darwinPre15.iso文件
 >
 > https://softwareupdate.vmware.com/cds/vmw-desktop/fusion/12.1.1/17801503/core/com.vmware.fusion.zip.tar
 
 
+
+
+
+
+
+> 
 
 ### 1.4 命令运行完成后，安装mac系统选项解锁成功，==我们需要重新打开刚才被我们关闭的5个服务==，然后运行vmware15在创建虚拟机界面就能看到
 
@@ -74,7 +81,7 @@ https://bbs.kafan.cn/thread-2206082-1-1.html
 
 ## 2.安装Mac操作系统
 
-### 2.1修改vmx文件
+### 2.1 修改vmx文件
 
 ![image-20200828233453960](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200828233454.png)
 
@@ -84,15 +91,55 @@ https://bbs.kafan.cn/thread-2206082-1-1.html
 
 
 
-## 2.2 启动虚拟机按步骤安装即可
+### 2.2 启动虚拟机按步骤安装即可
+
+```
+使用磁盘分区工具的抹掉功能对硬盘进行分区(抹掉功能会划分两个分区一个EFI分区，在苹果处看不到，存放引导程序，一个苹果文件系统的分区，这个在后续安装中选择这个分区将操作系统存放)
+
+之后安装将系统安装到抹掉功能使用后产生的一个分区上
+```
+
+
+
+参考
+
+https://zhuanlan.zhihu.com/p/92827822
+
+https://www.cnblogs.com/bad5/p/13251570.html
+
+https://zhuanlan.zhihu.com/p/337036027
+
+http://www.yishimei.cn/network/577.html
+
+https://vircloud.net/operations/vm-ins-macos-new.html
+
+
+
+![image-20210428142512444](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210428142512.png)
+
+![image-20210428163853985](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210428163854.png)
+
+
+
+![image-20210428142900607](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210428142900.png)
+
+
+
+![image-20210428164101005](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210428164101.png)
 
 
 
 
 
+#### 使用抹掉功能后，硬盘分区情况
 
+![image-20210428143930929](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210428143931.png)
 
-### 3.开启  安装允许任何来源 选项
+#### 将系统安装到使用磁盘分区抹掉功能产生的分区，系统安装完成后硬盘分区情况
+
+![image-20210428171606508](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210428171606.png)
+
+## 3.开启  安装允许任何来源 选项
 
 
 
@@ -105,3 +152,47 @@ macOS 10.13允许任何来源开启方法：如果需要恢复允许“任何来
 
 
 ![image-20200829003658669](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200829003701.png)
+
+
+
+### 之后就可以安装vmtools
+
+
+
+
+
+## 4.mac os虚拟机联网
+
+使用桥接模式，然后在虚拟机里手动设置ip，子网掩码，网关，dns地址
+
+
+
+## 5.显示硬盘和显示隐藏文件夹
+
+### 显示硬盘
+
+https://jingyan.baidu.com/article/acf728fd7138b7f8e510a398.html
+
+### 显示隐藏文件夹
+
+```
+#终端输出下面的命令显示隐藏文件夹
+
+defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder
+```
+
+
+
+### finder(mac的资源管理器)只显示英文
+
+https://nanc.xyz/record/twoway-of-localization.html
+
+```
+com.apple.finder.plist
+defaults write com.apple.finder.plist AppleLanguages -array en
+```
+
+
+
+
+

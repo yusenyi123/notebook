@@ -27,7 +27,7 @@ export JAVA_PATH=${JAVA_HOME}/bin:${JRE_HOME}/bin
 export PATH=$PATH:${JAVA_PATH}
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
-=
+
 
 
 
