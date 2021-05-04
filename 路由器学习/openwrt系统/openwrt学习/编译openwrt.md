@@ -1,28 +1,20 @@
 # 编译openwrt
 
-
-
 ## ==编译前准备：保证能够科学上网==
 
 ### ==因为会下载很多文件，那些文件需要科学上网才行，不然编译会出错，大部分出错就是网络问题导致下载的文件没有下载到==
-
-
-
-
 
 ## 编译环境ubuntu18系统下载，虚拟机安装
 
 https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/
 
-
-
 ## 安装编译所需软件包
 
 ```
  在软件更新中切换下载源，然后运行下列命令
- 
+
 sudo apt-get update
- 
+
 ubuntu 16.04:
 sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf gettext texinfo unzip sharutils libncurses5-dev ncurses-term zlib1g-dev gawk asciidoc libz-dev git-core uuid-dev libacl1-dev liblzo2-dev pkg-config libc6-dev curl libxml-parser-perl ocaml-nox
 
@@ -37,12 +29,7 @@ sudo apt-get install gcc g++ build-essential asciidoc  binutils bzip2 gawk gette
 
 ubuntu 18.04:
 sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip
-
-
-
 ```
-
-
 
 ## 下载openwrt
 
@@ -65,8 +52,6 @@ git clone -b lede-17.01 https://github.com/openwrt/openwrt.git source
 (请于Github上验证发布版名称.)
 ```
 
-
-
 ## 安装非官方的包（luci等）
 
 ```
@@ -75,16 +60,9 @@ git clone -b lede-17.01 https://github.com/openwrt/openwrt.git source
 ./scripts/feeds install -a
 ```
 
-
-
-
-
 ## 编译步骤
 
 ```
-
-
-
 进入菜单选项，选择编译数据，完成后生成编译配置文件
 make menuconfig 
 
@@ -101,17 +79,9 @@ find dl -size -1024c -exec rm -f {} \ ;命令将它们删除，然后重新执�
 
 
 make -j1 V=99
-
-
-
-
-
-
 ```
 
 ## 我编译花费了三个小时！！！！耐心等待吧，注意网络通畅可以科学上网，不然就会编译出错
-
-
 
 ## make参数讲解
 
@@ -138,4 +108,3 @@ make  V=99
 find dl -size -1024c -exec ls -l {} \;
 此命令可以列出下载不完整的文件（根据我多次编译的经验得出小于1k的文件属于下载不完整），如果存在这样的文件可以使用find dl -size -1024c -exec rm -f {} \;命令将它们删除，然后重新执行make download下载并反复检查，确认所有文件完整可大大提高编译成功率，避免浪费时间。
 ```
-

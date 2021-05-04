@@ -134,3 +134,19 @@ systemctl start firewalld.service
 systemctl enable firewalld.service
 ```
 
+
+
+
+
+## 静态网络分配报错解决(Restarting network (via systemctl):  Job for network.service failed because the control process exited with error code. See "systemctl status network.service" and "journalctl -xe" for details.)
+
+https://cloud.tencent.com/developer/article/1354933
+
+```
+systemctl stop NetworkManager
+
+ chkconfig NetworkManager off 
+
+service network restart
+```
+

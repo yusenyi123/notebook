@@ -46,7 +46,7 @@ source /etc/profile
 # 查看path
 echo $PATH
 
-chmod +x /home/sen/jdk1.8.0_291/bin/*
-chmod +x /home/sen/jdk1.8.0_291/jre/bin/*
+chmod +777 /home/sen/jdk1.8.0_291/bin/*
+chmod +777 /home/sen/jdk1.8.0_291/jre/bin/*
 ```
 

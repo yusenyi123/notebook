@@ -46,35 +46,19 @@ source:表示规则对应的源头地址，可以是一个IP，也可以是一�
 destination:表示规则对应的目标地址。可以是一个IP，也可以是一个网段。
 ```
 
-
-
 iptables 中表链规则 对处理数据包 处理的流程顺序
 
 每个链都会有一个默认的规则，默认规则的作用就是当数据包不符合链里面定义的其他规则的时候就采用默认的策略
 
 然后链里面可以定义一些特殊的规则
 
-
-
 当一个数据包到来的时候对链中的每个规则进行匹配，如果满足就执行这个规则定义的动作，如果全部检查完后没有匹配到规则就采取默认的规则
 
 当引用的子链中没有规则的时候，那就继续进行匹配
 
-
-
 路由器的内网网卡即我们设备的网关，收到我们设备的数据包后，需要对我们的数据包进行转发，根据路由表中的情况选择第一跳的出口网卡   修改目的mac地址 修改完成后对数据包进行发送，这时候我们的第一跳网卡（如果我们是有线上网，那么这个网卡就是ppp0，如果是无线桥接上网，这个网卡就是无线网卡中的一个，下面的规则中wlan1就是无线桥接中的网卡）
 
 此时iptables规则 nat表中的POSTROUTING链中存在规则----如果出口网卡是wlan1，那么就进行nat转换
-
-
-
-
-
-
-
-
-
-
 
 ### nat表中的链
 
@@ -145,10 +129,7 @@ num   pkts bytes target               prot opt in     out     source            
 1       20  9402 MINIUPNPD            all  --  *      *       0.0.0.0/0            0.0.0.0/0           
 2       20  9402 prerouting_wan_rule  all  --  *      *       0.0.0.0/0            0.0.0.0/0            /* !fw3: Custom wan prerouting rule chain */
 3       20  9402 FULLCONENAT          all  --  *      *       0.0.0.0/0            0.0.0.0/0            /* !fw3 */
-
 ```
-
-
 
 ### mangle表中的链
 
@@ -194,10 +175,7 @@ num   pkts bytes target     prot opt in     out     source               destina
 8        0     0 CT         udp  --  *      *       0.0.0.0/0            0.0.0.0/0            /* !fw3: SIP VoIP connection tracking */ udp dpt:5060 CT helper sip
 9        0     0 CT         udp  --  *      *       0.0.0.0/0            0.0.0.0/0            /* !fw3: SNMP monitoring connection tracking */ udp dpt:161 CT helper snmp
 10       0     0 CT         udp  --  *      *       0.0.0.0/0            0.0.0.0/0            /* !fw3: TFTP connection tracking */ udp dpt:69 CT helper tftp
-
 ```
-
-
 
 ### filter表中的链
 
@@ -346,20 +324,9 @@ Chain zone_wan_src_REJECT (1 references)
 num   pkts bytes target     prot opt in     out     source               destination         
 1        0     0 reject     all  --  eth0.2 *       0.0.0.0/0            0.0.0.0/0            /* !fw3 */
 2        0     0 reject     all  --  wlan1  *       0.0.0.0/0            0.0.0.0/0            /* !fw3 */
-
 ```
 
-
-
-
-
-
-
-
-
 openwrt中一个网络就是一个虚拟网卡，虚拟网卡下面统一管理各种接口（这些接口包括物理接口和物理接口产生的虚拟接口）
-
-
 
 有线网口是一个接口，一个无线信号是一个接口，路由器中的一个无线网卡可以生成多个无线信号
 
@@ -378,38 +345,30 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 0.0.0.0         192.168.1.1     0.0.0.0         UG    0      0        0 wlan1
 192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 wlan1
 192.168.11.0    0.0.0.0         255.255.255.0   U     0      0        0 br-lan
-
-
 ```
 
 ![image-20200823220918160](https://raw.githubusercontent.com/yusenyi123/pictures1/master/imgs/20200827162936.png)
-
-
 
 route 命令的输出项说明
 
 输出项 说明
 
-| Destination | 目标网段或者主机                                             |
-| ----------- | ------------------------------------------------------------ |
+| Destination | 目标网段或者主机                             |
+| ----------- | ------------------------------------ |
 | Gateway     | 网关地址，”*”和0.0.0.0 表示目标是本主机所属的网络，不需要路由 |
-| Genmask     | 网络掩码                                                     |
-| Flags       | 标记。一些可能的标记如下：                                   |
-|             | U — 路由是活动的                                             |
-|             | H — 目标是一个主机                                           |
-|             | G — 路由指向网关                                             |
-|             | R — 恢复动态路由产生的表项                                   |
-|             | D — 由路由的后台程序动态地安装                               |
-|             | M — 由路由的后台程序修改                                     |
-|             | ! — 拒绝路由                                                 |
-| Metric      | 路由距离，到达指定网络所需的中转数（linux 内核中没有使用）   |
-| Ref         | 路由项引用次数（linux 内核中没有使用）                       |
-| Use         | 此路由项被路由软件查找的次数                                 |
-| Iface       | 该路由表项对应的输出接口                                     |
-
-
-
-
+| Genmask     | 网络掩码                                 |
+| Flags       | 标记。一些可能的标记如下：                        |
+|             | U — 路由是活动的                           |
+|             | H — 目标是一个主机                          |
+|             | G — 路由指向网关                           |
+|             | R — 恢复动态路由产生的表项                      |
+|             | D — 由路由的后台程序动态地安装                    |
+|             | M — 由路由的后台程序修改                       |
+|             | ! — 拒绝路由                             |
+| Metric      | 路由距离，到达指定网络所需的中转数（linux 内核中没有使用）     |
+| Ref         | 路由项引用次数（linux 内核中没有使用）               |
+| Use         | 此路由项被路由软件查找的次数                       |
+| Iface       | 该路由表项对应的输出接口                         |
 
 设置和查看路由表都可以用 route 命令，设置内核路由表的命令格式是：
 
@@ -427,14 +386,6 @@ route  [add|del] [-net|-host] target [netmask Nm] [gw Gw] [[dev] If]
 - netmask : 目的地址的网络掩码
 - gw : 路由数据包通过的网关
 - dev : 为路由指定的网络接口
-
-
-
-
-
-
-
-
 
 ## openwrt中的防火墙和iptables的关系
 

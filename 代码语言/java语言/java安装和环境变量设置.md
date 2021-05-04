@@ -6,13 +6,15 @@ https://my.oschina.net/whiteSpring/blog/4915721
 
 ## 不同系统不同cpu下jdk的选择
 
-### linux 查看cpu架构，之后选择对应的linux 版本jdk，windows只有一类jdk
+### 
+
+### windows只有一类jdk(因为windows系统是amd芯片或者intel芯片   这两个都是x86指令集架构)
 
 
 
+### linux有两类jdk，所以需要 查看cpu架构，之后选择对应的linux 版本的jdk  (linux有两种cpu指令集架构，一种是arm芯片的arm指令集架构，另外一种是amd芯片或者intel芯片的x86指令集架构)
 
-
-使用uname -a命令
+在linux系统上使用uname -a命令  (可以看到是x86架构的指令集，那么就下载linux x86的安装包)
 
 ```
 [sen@localhost test]$ uname -a
@@ -24,7 +26,32 @@ Linux localhost.localdomain 3.10.0-1160.el7.x86_64 #1 SMP Mon Oct 19 16:18:59 UT
 
 ![image-20210423193047254](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210423193047.png)
 
+### windows安装JDK时会跳出是否需要安装公有jre的提示(推荐不安装，jdk中包含了jre了)
 
+有两种Java运行环境（JRE），公有JRE （public JRE)与私有JRE（private JRE)。JDK安装程序会安装私有JRE和一个可选的公有JRE。
+
+私有JRE在JDK安装时包含，完全包含在JDK的安装路径下，仅对JDK可见，为JDK所用。
+
+公有JRE在JDK安装时会提示是否额外安装，为系统中所有的Java程序共享，具有独立的安装程序。
+
+
+
+与私有JRE不同，公有JRE的安装程序会对系统做一些修改来与OS和浏览器建立更密切的关系，主要有以下几个方面：
+
+- 控制面板中的添加/删除程序列表就会出现公有JRE
+- 控制面板中安装一个Java的控制面板项，可用它来设置一些与公有JRE相关的参数
+- 在%SystemRoot%/system32下会出现java.exe,javaw.exe, javaws.exe
+- 注册表做必要的添加或调整以将公有JRE注册到系统中。
+
+公有JRE的卸载程序会做相应的清除工作来恢复一个干净的操作环境。
+
+由于种种原因,公有JRE卸载失败，或者有时重装JRE也不能解决问题，为了恢复以前的环境，有时需要手工将安装程序所做的修改undo回去，这时我们就需要了解安装程序对注册表做了哪些修改。
+
+
+
+
+
+## 环境变量的设置
 
 
 
@@ -35,20 +62,25 @@ windows下环境变量不区分大小，但是linux下是区分大小的，所�
 
 输入变量名CLASSPATH   变量值:    .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
 
-在系统已经存在的Path环境变量中添加 %JAVA_HOME%\bin和%JAVA_HOME%\jre\bin
+在系统已经存在的Path环境变量中添加  %JAVA_HOME%\bin和%JAVA_HOME%\jre\bin
 
 ```
 
-## JAVA_HOME环境变量
+### JAVA_HOME环境变量
 
 ![1.java环境变量设置1](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210410230313.png)
 
-## CLASSPATH环境变量
+### CLASSPATH环境变量
 
 ![image-20210410230434470](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210410230434.png)
 
 
 
-## Path环境变量中添加
+### 在已经有的Path环境变量中添加
 
 ![1.java环境变量设置2](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210410230321.png)
+
+
+
+
+
