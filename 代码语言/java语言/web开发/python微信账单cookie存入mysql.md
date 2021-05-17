@@ -1,10 +1,16 @@
 # python微信账单cookie存入mysql
 
+## 参考
+
+https://liubadao.com/wechat_pay/p01_mitmdump.html#id4
+
 ```
+conda create  -n  py38 python=3.8
 activate py38
 
-pip install PyMySQL
 
+python -m pip install mitmproxy==4.0.4
+pip install PyMySQL
 
 mitmdump  -p 8083 -s fetch_cookies.py  '~u https://wx.tenpay.com/'
 ```
@@ -228,6 +234,8 @@ mitmdump  -p 8083 -s fetch_cookies.py  '~u https://wx.tenpay.com/'
 
 ### 如何使用
 
+https://www.bejson.com/json2javapojo/new
+
 #### 1.开启mitmdump网络代理
 
 ```
@@ -243,7 +251,7 @@ mitmdump  -p 8083 -s fetch_cookies.py  '~u https://wx.tenpay.com/'
 
 ![image-20210424225755665](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210424225803.png)
 
-#### 
+
 
 #### 3.在安卓模拟器上开启收款监听app
 
