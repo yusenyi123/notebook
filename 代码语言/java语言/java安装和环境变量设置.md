@@ -8,11 +8,11 @@ https://blog.csdn.net/gulang03/article/details/81771343
 
 ## 不同系统不同cpu下jdk的选择
 
-### jdk下载地址(选择jdk需要注册一个oracle账号)
+### jdk下载地址(在官网下载jdk需要注册一个oracle账号)
 
 https://www.oracle.com/java/technologies/javase-downloads.html
 
-### windows只有一类jdk(因为windows系统是amd芯片或者intel芯片   这两个都是x86指令集架构)
+### windows只有一类jdk(因为windows系统的电脑基本都是amd芯片或者intel芯片   这两个都是x86指令集架构)
 
 
 
@@ -30,7 +30,7 @@ Linux localhost.localdomain 3.10.0-1160.el7.x86_64 #1 SMP Mon Oct 19 16:18:59 UT
 
 ![image-20210423193047254](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210423193047.png)
 
-### windows安装JDK时会跳出是否需要安装公有jre的提示(推荐不安装，jdk中包含了jre了)
+## windows安装JDK时会跳出是否需要安装公有jre的提示(推荐不安装，jdk中包含了jre了)
 
 有两种Java运行环境（JRE），公有JRE （public JRE)与私有JRE（private JRE)。JDK安装程序会安装私有JRE和一个可选的公有JRE。
 
@@ -49,13 +49,13 @@ Linux localhost.localdomain 3.10.0-1160.el7.x86_64 #1 SMP Mon Oct 19 16:18:59 UT
 
 公有JRE的卸载程序会做相应的清除工作来恢复一个干净的操作环境。
 
-由于种种原因,公有JRE卸载失败，或者有时重装JRE也不能解决问题，为了恢复以前的环境，有时需要手工将安装程序所做的修改undo回去，这时我们就需要了解安装程序对注册表做了哪些修改。
+由于种种原因,公有JRE卸载失败，或者有时重装JRE也不能解决问题，为了恢复以前的环境，有时需要手工将安装程序所做的修改恢复回去，这时我们就需要了解安装程序对注册表做了哪些修改。
 
 
 
 
 
-## 环境变量的设置
+## windows环境变量的设置
 
 
 
@@ -70,25 +70,58 @@ windows下环境变量不区分大小，但是linux下是区分大小的，所�
 
 ```
 
-### JAVA_HOME环境变量
+### JAVA_HOME环境变量设置
 
 ![1.java环境变量设置1](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210410230313.png)
 
-### CLASSPATH环境变量
+### CLASSPATH环境变量设置
 
-![image-20210410230434470](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210410230434.png)
+![1.java环境变量设置3](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210518094158.png)
 
 
 
-### 在已经有的Path环境变量中添加
+### 在已经有的Path环境变量中添加新的路径
 
 ![1.java环境变量设置2](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210410230321.png)
 
 
 
+## linux上jdk安装
+
+```
+#使用xftp软件将jdk-8u171-linux-x64.tar.gz 上传到/home/sen目录下
+
+cd /home/sen
+tar -xvf jdk-8u171-linux-x64.tar.gz 
 
 
+# 修改/etc/profile文件设置系统环境变量
+nano /etc/profile
 
+cat /etc/profile
+```
+
+在/etc/profile文件末尾添加下列内容
+
+```
+export JAVA_HOME=/home/sen/jdk1.8.0_171
+export JRE_HOME=${JAVA_HOME}/jre
+export JAVA_PATH=${JAVA_HOME}/bin:${JRE_HOME}/bin
+export PATH=$PATH:${JAVA_PATH}
+export CLASSPATH=.:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar
+```
+
+![image-20210521114351935](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210521114352.png)
+
+```
+# 让修改的文件生效
+source /etc/profile
+
+#测试是否生效
+java -version
+
+javac
+```
 
 
 
@@ -131,4 +164,12 @@ chcp 65001
 #测试运行
 java  Firstdemo
 ```
+
+
+
+
+
+## 关于orcale jdk 收费情况(open jdk开源免费)
+
+![img](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210521122134.jpeg)
 

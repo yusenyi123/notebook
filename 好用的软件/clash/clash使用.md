@@ -56,7 +56,7 @@ mixin:
     enhanced-mode: redir-host
     listen: 0.0.0.0:53
     nameserver: 
-      - https://doh.dns.sb/dns-query
+      - 223.5.5.5
       - https://dns.adguard.com/dns-query
 ```
 

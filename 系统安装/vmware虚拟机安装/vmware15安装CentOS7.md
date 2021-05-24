@@ -54,13 +54,13 @@ https://www.cnblogs.com/liuhouhou/p/8975812.html
 
 ![image-20210425143644174](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210425143644.png)
 
+### 因为没有设置SWAP分区会出现警告，不过没有关系
 
 
 
 
 
-
-## 安装ssh(如果选择的系统环境没有安装，就额外安装)
+## 安装ssh(如果选择的系统环境没有安装，就额外安装 ,最小安装centos的时候没有ssh)
 
 #### 1. 安装openssh-server
 
@@ -78,6 +78,8 @@ yum install -y openssl openssh-server
 ![img](http://static.oschina.net/uploads/space/2016/0515/123831_NYoU_160089.png)
 
 将上图的PermitRootLogin，RSAAuthentication，PubkeyAuthentication的设置打开。
+
+![image-20210427114730065](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210427114730.png)
 
 启动ssh的服务：
 

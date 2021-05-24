@@ -15,9 +15,11 @@ ip addr
 # 将/etc/sysconfig/network-scripts/ifcfg-ens33文件中的ONBOOT=no改为ONBOOT=yes
 vi /etc/sysconfig/network-scripts/ifcfg-ens33
 
+#查看配置的dns服务器是哪个
+cat /etc/resolv.conf 
 
 #重启网络服务
-systemctl restart netwrok
+systemctl restart network
 
  #开机启动网卡
 sudo systemctl enable network
@@ -25,6 +27,33 @@ sudo systemctl enable network
 #安装一下nano，比vim好用
 yum install nano
 ```
+
+```
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+#BOOTPROTO=dhcp
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=ens33
+UUID=35da066d-954a-4d4b-b433-b0bc914f68b2
+DEVICE=ens33
+#ONBOOT=no
+
+ONBOOT=yes         #开机自动联网
+BOOTPROTO=static    #使用静态网络分配方式
+IPADDR=192.168.109.100         #设置的静态固定IP地址
+NETMASK=255.255.255.0      # 子网掩码
+GATEWAY=192.168.109.2        #网关地址
+DNS1=114.114.114.114   #DNS服务器  
+```
+
+
 
 ## 安装图形界面
 
@@ -39,6 +68,7 @@ reboot
 ```
 #安装一下nano，比vim好用
 yum install nano
+#安装网络工具，可以使用ifconfig命令
 yum -y install net-tools
 
 # 安装ssh服务器
@@ -50,14 +80,31 @@ nano /etc/ssh/sshd_config
 # 启动ssh服务器服务，这样就可以使用xshell远程连接了
 sudo service sshd start
 
+sudo service sshd restart
+
+systemctl enable sshd.service
+
+
 # 查看是否启动成功
 ps -e | grep sshd
 
 # 查看防护墙状态
 systemctl status firewalld.service
 
-#关闭防护墙
+关闭防火墙： 
 systemctl stop firewalld.service
+
+
+启动防火墙：
+systemctl start firewalld.service
+
+
+关闭防火墙开启启动： 
+systemctl disable firewalld.service
+
+
+开启防火墙开机启动： 
+systemctl enable firewalld.service
 ```
 
 ![image-20210427114730065](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210427114730.png)
@@ -86,7 +133,7 @@ nano  /etc/sysconfig/network-scripts/ifcfg-ens33
 TYPE=Ethernet
 PROXY_METHOD=none
 BROWSER_ONLY=no
-#BOOTPROTO=dhcp
+#BOOTPROTO=dhcp       #注释掉
 DEFROUTE=yes
 IPV4_FAILURE_FATAL=no
 IPV6INIT=yes
@@ -97,8 +144,9 @@ IPV6_ADDR_GEN_MODE=stable-privacy
 NAME=ens33
 UUID=35da066d-954a-4d4b-b433-b0bc914f68b2
 DEVICE=ens33
-#ONBOOT=no
+#ONBOOT=no     #注释掉
 
+#新增配置
 ONBOOT=yes         #开机自动联网
 BOOTPROTO=static    #使用静态网络分配方式
 IPADDR=172.25.102.224         #设置的静态固定IP地址
@@ -145,7 +193,7 @@ https://cloud.tencent.com/developer/article/1354933
 ```
 systemctl stop NetworkManager
 
- chkconfig NetworkManager off 
+chkconfig NetworkManager off 
 
 service network restart
 ```
