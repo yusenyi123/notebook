@@ -42,7 +42,19 @@ https://github.com/Hackl0us/SS-Rule-Snippet/blob/master/LAZY_RULES/clash.yaml
 
 
 
+## 自己添加节点和相关网址浏览的代理规则
 
+### 1.找到需要修改的配置文件
+
+![image-20210706172346563](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210706172346.png)
+
+### 2.增加代理节点/代理节点分组
+
+![image-20210706172639065](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210706172639.png)
+
+### 3.增加代理规则
+
+![image-20210706172714236](https://raw.githubusercontent.com/yusenyi123/pictures2/master/imgs/20210706172714.png)
 
 ## clashtap模式开启
 
@@ -50,7 +62,7 @@ https://github.com/Hackl0us/SS-Rule-Snippet/blob/master/LAZY_RULES/clash.yaml
 
 ```
 mixin: 
-  interface-name: 以太网
+  interface-name: 以太网   #无线网就设置成 WLAN
   dns:
     enable: true    
     enhanced-mode: redir-host
